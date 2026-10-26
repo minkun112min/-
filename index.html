@@ -28,7 +28,11 @@
   <main>
     <!-- 1. 오늘의 특가 -->
     <section class="view active" id="view-sales">
-      <input type="search" id="search" class="search" placeholder="재료 검색 (예: 시금치, 고등어)" />
+      <div class="seg" role="tablist" aria-label="보기 방식">
+        <button data-viewmode="item" role="tab">🥬 품목별 가격 비교</button>
+        <button data-viewmode="mart" role="tab">🏪 마트별</button>
+      </div>
+      <input type="search" id="search" class="search" placeholder="재료 검색 (예: 계란, 대파, 고등어)" />
       <div class="chips" id="cat-chips"></div>
       <div class="chips" id="mart-chips"></div>
       <div id="mart-links"></div>
@@ -101,6 +105,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="parser.js"></script>
+  <script src="compare.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

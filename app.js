@@ -40,6 +40,8 @@
     filterCat: '전체',
     filterMart: '전체',
     query: '',
+    viewMode: LS.get('viewMode', 'item'), // item: 품목별 비교, mart: 마트별
+    expanded: new Set(),
     preview: [],
   };
 
@@ -178,11 +180,12 @@
     notice.innerHTML = msgs.join('<br>');
     notice.hidden = !msgs.length;
 
+    document.querySelectorAll('[data-viewmode]').forEach((b) => b.classList.toggle('on', b.dataset.viewmode === state.viewMode));
     const q = state.query.trim().replace(/\s/g, '');
     const items = allItems().filter((it) =>
       (state.filterCat === '전체' || it.category === state.filterCat) &&
       (state.filterMart === '전체' || it.mart === state.filterMart) &&
-      (!q || it.name.replace(/\s/g, '').includes(q))
+      (!q || it.name.replace(/\s/g, '').includes(q) || Compare.ingredientKey(it.name).replace(/\s/g, '').includes(q))
     );
 
     const el = document.getElementById('sales-list');
@@ -190,6 +193,8 @@
       el.innerHTML = `<div class="empty"><span class="big">🏷️</span>${allItems().length ? '조건에 맞는 특가가 없어요.' : '아직 오늘 특가가 없어요.<br>마트 카톡을 <b>붙여넣기</b> 탭에 넣어 보세요.'}</div>`;
       return;
     }
+
+    if (state.viewMode === 'item') { renderByItem(items, el); return; }
 
     const groups = groupByMart(items);
     el.innerHTML = groups.map(([martId, list]) => {
@@ -207,6 +212,51 @@
         }).join('')}
       </div>`;
     }).join('');
+  }
+
+  // 품목별 비교: 같은 재료를 마트 상관없이 묶고 싼 순서로
+  const CAT_ORDER = ['채소', '육류', '수산', '계란·두부', '양념·곡물', '과일', '기타'];
+  const ROWS_SHOWN = 5;
+  function renderByItem(items, el) {
+    const groups = Compare.groupByIngredient(items);
+    const catIdx = (g) => { const i = CAT_ORDER.indexOf(g.rows[0].item.category); return i < 0 ? 99 : i; };
+    // 여러 마트에서 파는 재료(비교할 거리가 있는 것)를 먼저
+    groups.sort((a, b) => (b.marts - a.marts) || (catIdx(a) - catIdx(b)) || a.key.localeCompare(b.key, 'ko'));
+
+    const shownMarts = [...new Set(items.map((it) => it.mart))];
+    const status = shownMarts.map((id) => {
+      const m = martById(id);
+      return `<span class="st"><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)} ${updatedLabel(id) || ''}</span>`;
+    }).join('');
+
+    el.innerHTML = `<div class="cmp-status">${status}</div>
+      <p class="cmp-note">같은 재료끼리 묶어 <b>싼 순서</b>로 보여줘요. 용량 단위가 같으면 <b>1단당·100g당</b> 가격으로 비교해요.</p>` +
+      groups.map((g) => {
+        const open = state.expanded.has(g.key);
+        const rows = open ? g.rows : g.rows.slice(0, ROWS_SHOWN);
+        const compare = g.rows.length > 1;
+        return `<div class="cmp">
+          <div class="cmp-head">
+            <span class="ico">${g.rows[0].item.icon || '🛒'}</span>
+            <h3>${esc(g.key)}</h3>
+            <small>${g.marts > 1 ? `<b class="cmp-marts">${g.marts}곳 비교</b> · ` : ''}${g.byUnit ? '단위가격 기준' : `최저 ${won(g.min)}`}</small>
+          </div>
+          ${rows.map((r, i) => {
+            const it = r.item, m = martById(it.mart), inCart = !!state.cart[keyOf(it)];
+            const best = compare && i === 0;
+            return `<div class="cmp-row ${best ? 'best' : ''}">
+              <span class="rank">${best ? '최저' : compare ? i + 1 : ''}</span>
+              <div class="info">
+                <div class="cmp-mart"><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)}</div>
+                <div class="cmp-name">${esc(it.name)}${it.badge ? ` <span class="badge">${esc(it.badge)}</span>` : ''}</div>
+              </div>
+              <div class="cmp-price"><b>${won(it.price)}</b>${r.up ? `<small>${Compare.unitLabel(r.up)}</small>` : ''}</div>
+              <button class="add ${inCart ? 'in' : ''}" data-add="${esc(keyOf(it))}">${inCart ? '✓ 담김' : '담기'}</button>
+            </div>`;
+          }).join('')}
+          ${g.rows.length > ROWS_SHOWN ? `<button class="cmp-more" data-more="${esc(g.key)}">${open ? '접기 ▲' : `${g.rows.length - ROWS_SHOWN}개 더 보기 ▼`}</button>` : ''}
+        </div>`;
+      }).join('');
   }
 
   function groupByMart(items) {
@@ -343,6 +393,8 @@
       const d = t.dataset;
 
       if (d.go) { go(d.go); return; }
+      if (d.viewmode) { state.viewMode = d.viewmode; LS.set('viewMode', d.viewmode); renderSales(); return; }
+      if (d.more) { state.expanded.has(d.more) ? state.expanded.delete(d.more) : state.expanded.add(d.more); renderSales(); return; }
       if (d.cat) { state.filterCat = d.cat; renderChips(); renderSales(); return; }
       if (d.mart) { state.filterMart = d.mart; renderChips(); renderSales(); return; }
 
