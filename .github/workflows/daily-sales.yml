@@ -18,20 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install requests beautifulsoup4
-      - run: python scripts/fetch_sales.py
-      - name: 바뀐 특가 저장
-        run: |
-          if git diff --quiet data/sales.json; then
-            echo "변경 없음"
-          else
-            git config user.name "minsikdang-bot"
-            git config user.email "actions@users.noreply.github.com"
-            git add data/sales.json
-            git commit -m "오늘의 특가 업데이트 $(TZ=Asia/Seoul date +%F)"
-            git pull --rebase origin "${GITHUB_REF_NAME}"
-            git push origin "HEAD:${GITHUB_REF_NAME}"
-          fi
+      - name: 수집하고 저장 (겹치면 다시 수집)
+        run: bash scripts/save_and_push.sh "오늘의 특가 업데이트 $(TZ=Asia/Seoul date +%F)" python scripts/fetch_sales.py
