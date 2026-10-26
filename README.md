@@ -31,7 +31,7 @@
 | gjs.pabal.net / ogq.pabal.net | 📱 아이패드 단축어 | 해외 서버 접속을 막아서, 한국에 있는 아이패드가 매일 아침 대신 받아 올림 |
 | l.ezip.kr 오늘의 특가 | 📱 공유 버튼 | 자동 접속 방지가 있어, 사파리에서 열고 공유 → 단축어로 보냄 |
 
-아이패드 설정 방법: **[docs/ipad-shortcut.md](docs/ipad-shortcut.md)**
+아이패드 설정 방법: **[docs/ipad-shortcut.md](docs/ipad-shortcut.md)** (Scriptable 앱에 코드 한 번 붙여넣기)
 
 `.github/workflows/daily-sales.yml` 이 **매일 오전 7시(한국시간)** 에 `scripts/fetch_sales.py` 를 실행해 `data/sales.json` 을 갱신합니다.
 
@@ -54,6 +54,7 @@ config/marts.json               마트 목록과 홈페이지 수집 설정
 data/sales.json                 자동 수집된 오늘 특가
 scripts/fetch_sales.py          홈페이지 특가 수집기 (GitHub에서 직접 접속)
 scripts/process_inbox.py        아이패드가 inbox/ 에 올린 페이지 읽기
+ipad/loader.js, ipad/collect.js 아이패드 Scriptable 수집 코드 (로더 / 본체)
 raw/                            아이패드가 올린 마지막 원본 (읽기 규칙 점검용)
 scripts/test_parser.js          카톡 인식 테스트 (node scripts/test_parser.js)
 scripts/test_fetch.py           수집기 테스트 (python scripts/test_fetch.py)
