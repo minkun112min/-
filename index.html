@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#b5472b" />
+  <title>민식당 장보기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="top-row">
+      <div>
+        <h1>민식당 장보기</h1>
+        <p class="sub" id="today-label"></p>
+      </div>
+      <button class="cart-pill" data-go="cart" aria-label="장바구니 보기">
+        🧺 <span id="cart-count">0</span>
+      </button>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="stat-items">0</b><span>오늘 특가</span></div>
+      <div class="stat"><b id="stat-marts">0</b><span>마트</span></div>
+      <div class="stat"><b id="stat-total">0원</b><span>장바구니 합계</span></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. 오늘의 특가 -->
+    <section class="view active" id="view-sales">
+      <input type="search" id="search" class="search" placeholder="재료 검색 (예: 시금치, 고등어)" />
+      <div class="chips" id="cat-chips"></div>
+      <div class="chips" id="mart-chips"></div>
+      <p class="notice" id="data-notice" hidden></p>
+      <div id="sales-list"></div>
+    </section>
+
+    <!-- 2. 장바구니 -->
+    <section class="view" id="view-cart">
+      <div id="cart-list"></div>
+      <div class="cart-actions" id="cart-actions" hidden>
+        <button class="btn primary" id="copy-list">📋 장보기 목록 복사 (카톡 전송용)</button>
+        <button class="btn ghost" id="clear-cart">장바구니 비우기</button>
+      </div>
+    </section>
+
+    <!-- 3. 카톡 특가 붙여넣기 -->
+    <section class="view" id="view-paste">
+      <div class="card">
+        <h2>카톡·홈페이지 특가 붙여넣기</h2>
+        <p class="help">마트 카톡 메시지를 길게 눌러 <b>복사</b>한 뒤 아래에 붙여넣으세요. 품목과 가격을 자동으로 찾아 줍니다.</p>
+        <label class="field">마트 선택
+          <select id="paste-mart"></select>
+        </label>
+        <textarea id="paste-text" rows="8" placeholder="예)&#10;[특가] 시금치 1단 2,980원 → 1,480원&#10;돼지앞다리살 1kg 9,900원&#10;두부 990원"></textarea>
+        <button class="btn primary" id="parse-btn">특가 찾기</button>
+      </div>
+      <div class="card" id="preview-card" hidden>
+        <h2>찾은 특가 <span id="preview-count"></span></h2>
+        <p class="help">틀린 항목은 체크를 풀거나 이름·가격을 고쳐 주세요.</p>
+        <div id="preview-list"></div>
+        <button class="btn primary" id="save-parsed">오늘 특가에 추가</button>
+      </div>
+      <div class="card">
+        <h2>직접 추가</h2>
+        <div class="row">
+          <input id="manual-name" placeholder="품목 (예: 애호박 1개)" />
+          <input id="manual-price" type="number" inputmode="numeric" placeholder="가격" />
+        </div>
+        <button class="btn" id="manual-add">추가</button>
+      </div>
+    </section>
+
+    <!-- 4. 마트 설정 -->
+    <section class="view" id="view-marts">
+      <div class="card">
+        <h2>자주 가는 마트</h2>
+        <p class="help">마트 이름을 바꾸거나 추가할 수 있어요. 이 휴대폰에 저장됩니다.</p>
+        <div id="mart-edit-list"></div>
+        <div class="row">
+          <input id="new-mart" placeholder="새 마트 이름" />
+          <button class="btn" id="add-mart">추가</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>오늘 직접 넣은 특가</h2>
+        <p class="help">붙여넣기·직접 추가로 넣은 오늘 특가를 지웁니다. (자동 수집된 특가는 그대로)</p>
+        <button class="btn ghost" id="clear-manual">오늘 직접 넣은 특가 모두 지우기</button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabs">
+    <button data-go="sales" class="active"><span>🏷️</span>오늘 특가</button>
+    <button data-go="cart"><span>🧺</span>장바구니</button>
+    <button data-go="paste"><span>📥</span>붙여넣기</button>
+    <button data-go="marts"><span>🏪</span>마트</button>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="parser.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

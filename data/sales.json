@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-26",
+  "updated_at": "2026-10-26T07:00:00+09:00",
+  "sample": true,
+  "items": [
+    { "mart": "mart-a", "name": "시금치 1단", "price": 1480, "original_price": 2980 },
+    { "mart": "mart-a", "name": "국내산 돼지 앞다리살 1kg", "price": 9900, "original_price": 14900 },
+    { "mart": "mart-a", "name": "두부 300g", "price": 990, "original_price": 1800 },
+    { "mart": "mart-a", "name": "애호박 1개", "price": 1290, "original_price": 1990 },
+    { "mart": "mart-b", "name": "무 1개", "price": 1500, "original_price": 2500 },
+    { "mart": "mart-b", "name": "콩나물 500g", "price": 1200, "original_price": 1900 },
+    { "mart": "mart-b", "name": "계란 30구", "price": 6980, "original_price": 8900 },
+    { "mart": "mart-b", "name": "고등어 2손", "price": 7900, "original_price": 11800 },
+    { "mart": "mart-c", "name": "어묵 1kg", "price": 4500, "original_price": 6200 },
+    { "mart": "mart-c", "name": "대파 1단", "price": 1980, "original_price": 2980 },
+    { "mart": "mart-c", "name": "깐마늘 1kg", "price": 8900, "original_price": 11000 },
+    { "mart": "mart-c", "name": "멸치 500g", "price": 9800, "original_price": 13500 }
+  ]
+}

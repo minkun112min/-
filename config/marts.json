@@ -1,0 +1,41 @@
+{
+  "_설명": "마트 목록입니다. 홈페이지에서 자동으로 특가를 가져오려면 url과 selectors를 채우세요. 비워두면 카톡 붙여넣기로만 등록합니다.",
+  "marts": [
+    {
+      "id": "mart-a",
+      "name": "OO마트",
+      "color": "#e8590c",
+      "url": "",
+      "selectors": {
+        "item": "",
+        "name": "",
+        "price": "",
+        "original_price": ""
+      }
+    },
+    {
+      "id": "mart-b",
+      "name": "XX농협하나로",
+      "color": "#2f9e44",
+      "url": "",
+      "selectors": {
+        "item": "",
+        "name": "",
+        "price": "",
+        "original_price": ""
+      }
+    },
+    {
+      "id": "mart-c",
+      "name": "△△식자재마트",
+      "color": "#1971c2",
+      "url": "",
+      "selectors": {
+        "item": "",
+        "name": "",
+        "price": "",
+        "original_price": ""
+      }
+    }
+  ]
+}
