@@ -59,7 +59,7 @@
 <link rel="stylesheet" type="text/css" href="http://smart.dhn.kr/assets/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="http://smart.dhn.kr/assets/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="http://smart.dhn.kr/views/_layout/bootstrap/css/style.css?v=261026173602" />
+<link rel="stylesheet" type="text/css" href="http://smart.dhn.kr/views/_layout/bootstrap/css/style.css?v=261026173842" />
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css" />
 <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/ui-lightness/jquery-ui.css" />
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -71,7 +71,7 @@ var cb_url = "http://smart.dhn.kr";
 var cb_cookie_domain = "";
 var cb_charset = "UTF-8";
 var cb_time_ymd = "2026-10-26";
-var cb_time_ymdhis = "2026-10-26 17:36:01";
+var cb_time_ymdhis = "2026-10-26 17:38:42";
 var layout_skin_path = "_layout/bootstrap";
 var view_skin_path = "smart/bootstrap";
 var is_member = "";
@@ -80,19 +80,19 @@ var cb_admin_url = "";
 var cb_board = "";
 var cb_board_url = "";
 var cb_device_type = "mobile";
-var cb_csrf_hash = "2188b1927cd488aff46223a97c3135a7";
+var cb_csrf_hash = "39ef24505203cdc4b1e59b03b6fe0a28";
 var cookie_prefix = "";
 </script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="http://smart.dhn.kr/assets/js/html5shiv.min.js"></script>
 <script type="text/javascript" src="http://smart.dhn.kr/assets/js/respond.min.js"></script>
 <![endif]-->
-<script type="text/javascript" src="http://smart.dhn.kr/assets/js/common.js?v=261026173602"></script>
+<script type="text/javascript" src="http://smart.dhn.kr/assets/js/common.js?v=261026173842"></script>
 <script type="text/javascript" src="http://smart.dhn.kr/assets/js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="http://smart.dhn.kr/assets/js/jquery.validate.extension.js"></script>
 <script type="text/javascript" src="http://smart.dhn.kr/assets/js/sideview.js"></script>
 <!-- GENIE JS 추가 -->
-<script type="text/javascript" src="http://smart.dhn.kr/js/common.js?v=261026173602"></script>
+<script type="text/javascript" src="http://smart.dhn.kr/js/common.js?v=261026173842"></script>
 </head>
 <body >
 <div id="snackbar"></div><!-- 여기까지 레이아웃 상단입니다 -->
@@ -106,7 +106,7 @@ var cookie_prefix = "";
     // 스크롤 애니메이션
     new WOW().init();
 </script>
-<link rel="stylesheet" type="text/css" href="/views/smart/bootstrap/css/common.css?v=261026173602" />
+<link rel="stylesheet" type="text/css" href="/views/smart/bootstrap/css/common.css?v=261026173842" />
 <link href="/views/smart/bootstrap/css/shome_c_style.css" rel="stylesheet">
 
 <div class="wrap_smart">
@@ -331,7 +331,7 @@ document.getElementById("defaultOpen").click();
 	// 	$.ajax({
 	// 		url: "/smart/addcart",
 	// 		type: "POST",
-	// 		data: {"shop_mem_id" : "3001", "psdid" : "", "goodsid" : goodsid, "qty" : qty, "csrf_test_name" : "2188b1927cd488aff46223a97c3135a7"},
+	// 		data: {"shop_mem_id" : "3001", "psdid" : "", "goodsid" : goodsid, "qty" : qty, "csrf_test_name" : "39ef24505203cdc4b1e59b03b6fe0a28"},
 	// 		success: function (json){
 	// 			if(json.code == "0"){
 	// 				$("#cart_count").html(json.cartcnt); //주문건수 표기
@@ -411,7 +411,7 @@ document.getElementById("defaultOpen").click();
 		$.ajax({
 			url: "/smart/search_goods",
 			type: "POST",
-			data: {"word" : word, "psdid" : "", "csrf_test_name" : "2188b1927cd488aff46223a97c3135a7"},
+			data: {"word" : word, "psdid" : "", "csrf_test_name" : "39ef24505203cdc4b1e59b03b6fe0a28"},
 			success: function (json){
 				if(json.code == "0"){
 					// $("#cart_count").html(json.cartcnt); //주문건수 표기
