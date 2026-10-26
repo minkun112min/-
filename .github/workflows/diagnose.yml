@@ -1,0 +1,45 @@
+name: 접속 진단 (임시)
+
+on:
+  push:
+    branches: ["claude/**"]
+    paths: [".github/workflows/diagnose.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 진단
+        run: |
+          mkdir -p diag
+          UA="Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148"
+          {
+            echo "== 이 서버 위치"; curl -s --max-time 10 https://ipinfo.io/json || true
+            for h in gjs.pabal.net ogq.pabal.net pabal.net www.pabal.net l.ezip.kr; do
+              echo "== DNS $h"; dig +short A $h; dig +short AAAA $h
+            done
+            for u in http://gjs.pabal.net/main.html https://gjs.pabal.net/main.html http://ogq.pabal.net/ https://www.pabal.net/ http://pabal.net/; do
+              echo "== $u"
+              curl -sS -o /dev/null -A "$UA" --connect-timeout 15 --max-time 25 -w "http=%{http_code} ip=%{remote_ip} final=%{url_effective}\n" "$u" 2>&1 || true
+            done
+            echo "== TCP 80/443 to gjs"
+            IP=$(dig +short A gjs.pabal.net | tail -1)
+            for p in 80 443; do timeout 10 bash -c "echo > /dev/tcp/$IP/$p" && echo "$IP:$p open" || echo "$IP:$p closed/timeout"; done
+          } > diag/report.txt 2>&1
+          # 카카오톡 채널 공개 소식
+          curl -sSL -A "$UA" --max-time 25 -o diag/kakao_home.html -w "kakao_home http=%{http_code} size=%{size_download}\n" "https://pf.kakao.com/_xajLmG" >> diag/report.txt 2>&1 || true
+          curl -sSL -A "$UA" -H "Accept: application/json" --max-time 25 -o diag/kakao_posts.json -w "kakao_posts http=%{http_code} size=%{size_download}\n" "https://pf.kakao.com/rocket-web/web/profiles/_xajLmG/posts" >> diag/report.txt 2>&1 || true
+          curl -sSL -A "$UA" -H "Accept: application/json" --max-time 25 -o diag/kakao_profile.json -w "kakao_profile http=%{http_code} size=%{size_download}\n" "https://pf.kakao.com/rocket-web/web/profiles/_xajLmG" >> diag/report.txt 2>&1 || true
+          cat diag/report.txt
+      - name: 저장
+        run: |
+          git config user.name "minsikdang-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add diag
+          git commit -m "접속 진단 결과" || exit 0
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
