@@ -5,6 +5,8 @@ config/marts.json 의 마트마다 "type" 으로 읽는 방법을 정합니다.
 - "selectors" : 일반 홈페이지. selectors 에 CSS 선택자를 적어 둠
 - "text"      : 페이지 글자에서 '품목 ○○원' 줄을 찾음
 - "link"      : 자동 수집하지 않음 (앱의 바로가기 버튼만)
+"inbox": true 인 마트는 서버가 직접 접속하지 않고, 아이패드 단축어가 inbox/ 폴더에
+올린 페이지를 scripts/process_inbox.py 가 읽습니다 (해외 접속이 막힌 마트용).
 
 실행: python scripts/fetch_sales.py
        python scripts/fetch_sales.py --file dhn=tests/fixtures/dhn_view.html   (저장된 파일로 시험)
@@ -142,16 +144,66 @@ def scrape_text(html, mart):
     return items
 
 
-def scrape(mart, local_file=None):
-    kind = mart.get("type") or ("selectors" if mart.get("selectors", {}).get("item") else "text")
+def parse_html(mart, html):
+    """이미 받은 HTML(아이패드가 올린 파일 등)에서 특가를 읽습니다."""
+    kind = mart.get("type") or "text"
     if kind == "dhn_smart":
-        if local_file:
-            return parse_dhn(Path(local_file).read_text(encoding="utf-8"), mart["id"])
-        return scrape_dhn(mart)
-    html = Path(local_file).read_text(encoding="utf-8") if local_file else get(mart["url"])
+        return parse_dhn(html, mart["id"])
     if kind == "selectors":
         return scrape_selectors(html, mart), ""
     return scrape_text(html, mart), ""
+
+
+def scrape(mart):
+    """서버에서 직접 접속해 특가를 읽습니다."""
+    if mart.get("type") == "dhn_smart":
+        return scrape_dhn(mart)
+    return parse_html(mart, get(mart["url"]))
+
+
+def decode_html(raw: bytes) -> str:
+    for enc in ("utf-8", "cp949"):
+        try:
+            return raw.decode(enc)
+        except UnicodeDecodeError:
+            pass
+    return raw.decode("utf-8", errors="replace")
+
+
+def load_config():
+    return json.loads(CONFIG.read_text(encoding="utf-8")).get("marts", [])
+
+
+def save_sales(results, failed=()):
+    """results = {마트id: (items, 제목)}. 이번에 읽은 마트만 바꾸고 나머지 마트 특가는 그대로 둡니다."""
+    try:
+        data = json.loads(OUTPUT.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        data = {}
+    if data.get("sample"):
+        data = {}
+    now = datetime.now(KST)
+    stamp = now.isoformat(timespec="seconds")
+    items = [it for it in data.get("items", []) if it.get("mart") not in results]
+    notes = {k: v for k, v in data.get("notes", {}).items() if k not in results}
+    updated = {k: v for k, v in data.get("mart_updated", {}).items() if k not in results}
+    for mid, (new_items, title) in results.items():
+        items.extend(new_items)
+        updated[mid] = stamp
+        if title:
+            notes[mid] = title
+    OUTPUT.write_text(
+        json.dumps({
+            "date": now.strftime("%Y-%m-%d"),
+            "updated_at": stamp,
+            "mart_updated": updated,
+            "failed": list(failed),
+            "notes": notes,
+            "items": items,
+        }, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    print(f"저장 완료: 총 {len(items)}개")
 
 
 def main(argv):
@@ -161,42 +213,33 @@ def main(argv):
             mid, _, path = spec.partition("=")
             local[mid] = path
 
-    config = json.loads(CONFIG.read_text(encoding="utf-8"))
-    marts = [m for m in config.get("marts", []) if m.get("url") and m.get("type") != "link"]
+    marts = [m for m in load_config() if m.get("url") and m.get("type") != "link" and not m.get("inbox")]
     if local:
-        marts = [m for m in marts if m["id"] in local]
+        marts = [m for m in load_config() if m["id"] in local]
     if not marts:
         print("자동 수집할 마트가 없습니다.")
         return 0
 
-    all_items, failed, notes = [], [], {}
+    results, failed = {}, []
     for mart in marts:
         try:
-            items, title = scrape(mart, local.get(mart["id"]))
-            print(f"{mart['name']}: {len(items)}개")
-            all_items.extend(items)
-            if title:
-                notes[mart["id"]] = title
+            if mart["id"] in local:
+                got = parse_html(mart, decode_html(Path(local[mart["id"]]).read_bytes()))
+            else:
+                got = scrape(mart)
+            print(f"{mart['name']}: {len(got[0])}개")
+            if got[0]:
+                results[mart["id"]] = got
+            else:
+                failed.append(mart["name"])
         except Exception as e:  # 한 마트가 실패해도 나머지는 계속
             print(f"{mart['name']} 실패: {e}", file=sys.stderr)
             failed.append(mart["name"])
 
-    if not all_items:
+    if not results:
         print("가져온 특가가 없어 기존 파일을 유지합니다.")
         return 1 if failed else 0
-
-    now = datetime.now(KST)
-    OUTPUT.write_text(
-        json.dumps({
-            "date": now.strftime("%Y-%m-%d"),
-            "updated_at": now.isoformat(timespec="seconds"),
-            "failed": failed,
-            "notes": notes,
-            "items": all_items,
-        }, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    print(f"저장 완료: 총 {len(all_items)}개")
+    save_sales(results, failed)
     return 0
 
 

@@ -34,6 +34,7 @@
     remoteDate: null,
     remoteSample: false,
     remoteNotes: {},
+    martUpdated: {},
     manualItems: LS.get('manual.' + TODAY, []),
     cart: LS.get('cart', {}), // key -> { item, qty, bought }
     filterCat: '전체',
@@ -82,6 +83,7 @@
       state.remoteDate = data.date || null;
       state.remoteSample = !!data.sample;
       state.remoteNotes = data.notes || {};
+      state.martUpdated = data.mart_updated || {};
     } catch (e) { /* 자동 수집 데이터 없음 */ }
 
     const d = new Date();
@@ -156,12 +158,23 @@
       : '';
   }
 
+  // "오늘 07:03 수집" / "10/25 수집(지난 자료)"
+  function updatedLabel(martId) {
+    const iso = state.martUpdated[martId];
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (isNaN(d)) return '';
+    const p = (n) => String(n).padStart(2, '0');
+    const day = `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+    return day === TODAY ? `오늘 ${p(d.getHours())}:${p(d.getMinutes())} 수집` : `<b class="stale">${d.getMonth() + 1}/${d.getDate()} 자료</b>`;
+  }
+
   function renderSales() {
     renderLinks();
     const notice = document.getElementById('data-notice');
     const msgs = [];
     if (state.remoteSample && state.remoteItems.length) msgs.push('지금 보이는 자동 수집 특가는 <b>예시</b>예요. 마트 홈페이지 주소를 설정하면 매일 아침 진짜 특가로 바뀝니다.');
-    else if (state.remoteDate && state.remoteDate !== TODAY && state.remoteItems.length) msgs.push(`자동 수집 특가는 <b>${esc(state.remoteDate)}</b> 기준이에요. 오늘 것은 아직 안 올라왔어요.`);
+    else if (!Object.keys(state.martUpdated).length && state.remoteDate && state.remoteDate !== TODAY && state.remoteItems.length) msgs.push(`자동 수집 특가는 <b>${esc(state.remoteDate)}</b> 기준이에요. 오늘 것은 아직 안 올라왔어요.`);
     notice.innerHTML = msgs.join('<br>');
     notice.hidden = !msgs.length;
 
@@ -183,7 +196,7 @@
       const m = martById(martId);
       list.sort((a, b) => discount(b) - discount(a));
       return `<div class="mart-group">
-        <div class="mart-head"><h3><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)}</h3><small>${state.remoteNotes[martId] ? esc(state.remoteNotes[martId].replace(/#/g, ' ').trim()) + ' · ' : ''}${list.length}개 특가${m.url ? ` · <a href="${esc(m.url)}" target="_blank" rel="noopener">페이지 ↗</a>` : ''}</small></div>
+        <div class="mart-head"><h3><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)}</h3><small>${updatedLabel(martId) ? updatedLabel(martId) + ' · ' : ''}${state.remoteNotes[martId] ? esc(state.remoteNotes[martId].replace(/#/g, ' ').trim()) + ' · ' : ''}${list.length}개 특가${m.url ? ` · <a href="${esc(m.url)}" target="_blank" rel="noopener">페이지 ↗</a>` : ''}</small></div>
         ${list.map((it) => {
           const inCart = !!state.cart[keyOf(it)];
           return `<div class="item">

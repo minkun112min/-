@@ -28,8 +28,10 @@
 | 마트 | 자동 수집 | 이유 |
 |---|---|---|
 | 홈마트 곤지암 (smart.dhn.kr) | ✅ 됨 | 코너별(야채·정육·수산 등) 상품 80여 개를 가져옵니다 |
-| gjs.pabal.net / ogq.pabal.net | ❌ 바로가기만 | 해외 서버(GitHub)에서 접속이 막혀 있음 |
-| l.ezip.kr 오늘의 특가 | ❌ 바로가기만 | 자동 접속 방지(보안 확인 화면)가 있음 |
+| gjs.pabal.net / ogq.pabal.net | 📱 아이패드 단축어 | 해외 서버 접속을 막아서, 한국에 있는 아이패드가 매일 아침 대신 받아 올림 |
+| l.ezip.kr 오늘의 특가 | 📱 공유 버튼 | 자동 접속 방지가 있어, 사파리에서 열고 공유 → 단축어로 보냄 |
+
+아이패드 설정 방법: **[docs/ipad-shortcut.md](docs/ipad-shortcut.md)**
 
 `.github/workflows/daily-sales.yml` 이 **매일 오전 7시(한국시간)** 에 `scripts/fetch_sales.py` 를 실행해 `data/sales.json` 을 갱신합니다.
 
@@ -50,7 +52,9 @@ index.html, style.css, app.js   화면
 parser.js                       카톡 글에서 품목·가격 찾기
 config/marts.json               마트 목록과 홈페이지 수집 설정
 data/sales.json                 자동 수집된 오늘 특가
-scripts/fetch_sales.py          홈페이지 특가 수집기
+scripts/fetch_sales.py          홈페이지 특가 수집기 (GitHub에서 직접 접속)
+scripts/process_inbox.py        아이패드가 inbox/ 에 올린 페이지 읽기
+raw/                            아이패드가 올린 마지막 원본 (읽기 규칙 점검용)
 scripts/test_parser.js          카톡 인식 테스트 (node scripts/test_parser.js)
 scripts/test_fetch.py           수집기 테스트 (python scripts/test_fetch.py)
 ```

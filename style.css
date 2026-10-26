@@ -203,3 +203,4 @@ textarea { resize: vertical; margin-bottom: 10px; }
 .mart-head small a { color: var(--brand); }
 .badge { font-size: 11px; color: #fff; background: var(--brand); border-radius: 6px; padding: 0 5px; font-weight: 700; }
 .mart-head small { text-align: left; }
+.stale { color: var(--brand); }
