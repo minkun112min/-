@@ -76,6 +76,32 @@ async function putFile(path, text, message) {
   return github('PUT', path, body);
 }
 
+// ---------- 사파리 공유로 받은 페이지 (자동 접속이 막힌 마트용) ----------
+// 단축어 "특가 보내기"가 "주소\n<html…>" 을 넘겨줌
+const shared = (typeof args !== 'undefined' && args && typeof args.shortcutParameter === 'string') ? args.shortcutParameter : '';
+if (shared.length > 200) {
+  const nl = shared.indexOf('\n');
+  const pageUrl = nl > 0 ? shared.slice(0, nl).trim() : '';
+  const html = nl > 0 ? shared.slice(nl + 1) : shared;
+  // 주소로 마트 구분 (모르는 곳은 ezip 으로)
+  let id = 'ezip';
+  const pm = pageUrl.match(/^https?:\/\/([a-z0-9]+)\.pabal\.net/i);
+  if (pm) id = pm[1].toLowerCase();
+  else if (/smart\.dhn\.kr/i.test(pageUrl)) id = 'dhn';
+  say(`민식당 특가 보내기 ${new Date().toLocaleString('ko-KR')} (코드: ${ref})`);
+  say(`  받은 페이지: ${pageUrl || '(주소 없음)'} → ${id}, ${html.length}자`);
+  const path = `inbox/${id}-${stamp()}.html`;
+  const up = await putFile(path, `<!-- source: ${pageUrl} -->\n` + html, `사파리 공유 ${id}`);
+  const ok = up.code === 200 || up.code === 201;
+  say(ok ? `  ✅ 업로드 ${path}` : `  ❌ 업로드 실패 ${up.code}: ${JSON.stringify(up.json).slice(0, 300)}`);
+  for (let i = 1; i <= 4; i++) {
+    const logUp = await putFile('ipad/last-share.txt', log.join('\n') + '\n', '사파리 공유 기록');
+    if (logUp.code === 200 || logUp.code === 201) break;
+    await new Promise((r) => Timer.schedule(1500 * i, false, r));
+  }
+  return ok ? `${id} 특가 페이지를 보냈어요 ✅` : `보내기 실패 (${up.code})`;
+}
+
 const results = [];
 say(`민식당 특가 수집 시작 ${new Date().toLocaleString('ko-KR')} (코드: ${ref})`);
 

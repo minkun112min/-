@@ -235,3 +235,16 @@ textarea { resize: vertical; margin-bottom: 10px; }
 .cmp-row .add { min-width: 58px; padding: 8px 10px; }
 .cmp-more { display: block; width: 100%; border: 0; border-top: 1px solid var(--line); background: transparent; padding: 10px; color: var(--muted); font-weight: 700; cursor: pointer; }
 @media (max-width: 420px) { .cmp-row .rank { flex-basis: 26px; } .cmp-row { gap: 8px; } }
+
+/* 즐겨찾기 */
+.star { border: 0; background: transparent; font-size: 22px; line-height: 1; color: var(--muted); cursor: pointer; padding: 2px 4px; }
+.star.on { color: #f59f00; }
+.cmp.fav { border-color: #f5c451; }
+.fav-only { margin-top: 10px; }
+.fav-only.on { background: #f59f00; border-color: #f59f00; color: #fff; }
+.fav-title { font-weight: 800; font-size: 16px; margin: 16px 2px 0; }
+.fav-title-row small { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 6px; }
+.fav-box { background: var(--card); border: 1px dashed #f5c451; border-radius: var(--radius); padding: 12px; margin-top: 12px; }
+.fav-box .fav-title { margin: 0 0 4px; }
+.fav-suggest { display: flex; flex-wrap: wrap; gap: 6px; }
+.fav-missing { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); margin-top: 10px; }
