@@ -2,7 +2,7 @@
 
 파일 이름: inbox/<마트id>-<아무거나>.html   예) inbox/gjs-20261027-0700.html
 - 마트마다 가장 최근 파일만 읽습니다.
-- 원본은 raw/<마트id>.html 로 남겨 둡니다 (페이지 모양이 바뀌었을 때 확인용).
+- 읽기에 실패하면 원본을 raw/<마트id>.html 로 남깁니다 (페이지 모양이 바뀌었을 때 확인용).
 - 읽은 inbox 파일은 지웁니다.
 
 실행: python scripts/process_inbox.py
@@ -36,7 +36,6 @@ def main():
             print(f"{f.name}: 모르는 마트 id '{mid}' (config/marts.json 확인)", file=sys.stderr)
             continue
         html = decode_html(f.read_bytes())
-        (RAW / f"{mid}.html").write_text(html, encoding="utf-8")
         try:
             items, title = parse_html(mart, html)
         except Exception as e:
@@ -45,7 +44,10 @@ def main():
         print(f"{mart['name']}: {len(items)}개 ({f.name}, {len(html):,}자)")
         if items:
             results[mid] = (items, title)
+            (RAW / f"{mid}.html").unlink(missing_ok=True)
         else:
+            # 읽기에 실패했을 때만 원본을 남겨 원인을 확인 (매일 저장하면 저장소가 커짐)
+            (RAW / f"{mid}.html").write_text(html, encoding="utf-8")
             failed.append(mart["name"])
 
     for f in files:

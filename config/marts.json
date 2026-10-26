@@ -12,7 +12,7 @@
       "id": "gjs",
       "name": "광주식자재마트",
       "color": "#e8590c",
-      "type": "text",
+      "type": "pabal",
       "inbox": true,
       "url": "https://gjs.pabal.net",
       "_메모": "광주 중앙로. 해외 접속 차단 → 아이패드 단축어가 매일 올림. 오늘 행사 페이지 = 도메인 첫 화면"
@@ -21,7 +21,7 @@
       "id": "ogq",
       "name": "엘마트 광주점",
       "color": "#1971c2",
-      "type": "text",
+      "type": "pabal",
       "inbox": true,
       "url": "https://ogq.pabal.net",
       "_메모": "초월읍. 해외 접속 차단 → 아이패드 단축어가 매일 올림. 오늘 행사 페이지 = 도메인 첫 화면"

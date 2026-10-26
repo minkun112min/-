@@ -109,6 +109,65 @@ def scrape_dhn(mart):
     return parse_dhn(get(view), mart["id"])
 
 
+# ---------- pabal.net 전단 (광주식자재마트, 엘마트 광주점) ----------
+PABAL_PRICE = re.compile(r"^(now_price\d*|proc_price)$")
+PABAL_NAME = re.compile(r"^flexTableItemHeader")
+DATE_TITLE = re.compile(r"^\d{1,2}월\s*\d{1,2}일")
+
+
+def parse_pabal(html, mart_id):
+    soup = BeautifulSoup(html, "html.parser")
+    items, seen, section, title = [], {}, "", ""
+    for el in soup.find_all(True):
+        classes = el.get("class") or []
+        if "flexTableTitle" in classes:  # 코너 제목 (엘마트: "▶ 야채식자재 3일장")
+            raw = el.get_text(" ", strip=True)
+            text = raw.lstrip("▶ ").strip()
+            if DATE_TITLE.match(text) and not raw.startswith("▶"):
+                title = title or text
+            elif text and text != "전단보기":
+                section = text
+            continue
+        if not any(PABAL_PRICE.match(c) for c in classes):
+            continue
+        price = price_cell(el.get_text(strip=True))
+        if not price:
+            continue
+        # 가격 칸에서 위로 올라가며 상품명 칸이 들어 있는 상품 카드를 찾음
+        card, name_el = el, None
+        for _ in range(4):
+            card = card.parent
+            if card is None:
+                break
+            name_el = card.find(class_=PABAL_NAME)
+            if name_el:
+                break
+        if not name_el:
+            continue
+        status = card.parent.find(attrs={"data-c": True}) if card.parent else None
+        if status is not None and status.get("data-c") in ("Y", "X"):  # Y 품절, X 금액 없음
+            continue
+        name = re.sub(r"\s+", " ", name_el.get_text(" ", strip=True)).strip("` ")
+        if not name:
+            continue
+        badge = text_of(card, ".exclusive_box")
+        if (name, price) in seen:  # 대표상품과 코너에 같은 상품이 또 나옴 → 표시만 보충
+            old = seen[(name, price)]
+            old["badge"] = old["badge"] or badge
+            old["section"] = old["section"] or section
+            continue
+        items.append({
+            "mart": mart_id,
+            "name": name,
+            "price": price,
+            "original_price": None,
+            "section": section,
+            "badge": badge,
+        })
+        seen[(name, price)] = items[-1]
+    return items, title
+
+
 # ---------- 일반 홈페이지 ----------
 def scrape_selectors(html, mart):
     soup = BeautifulSoup(html, "html.parser")
@@ -149,6 +208,8 @@ def parse_html(mart, html):
     kind = mart.get("type") or "text"
     if kind == "dhn_smart":
         return parse_dhn(html, mart["id"])
+    if kind == "pabal":
+        return parse_pabal(html, mart["id"])
     if kind == "selectors":
         return scrape_selectors(html, mart), ""
     return scrape_text(html, mart), ""
