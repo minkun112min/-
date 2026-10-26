@@ -99,7 +99,12 @@ for (const mart of MARTS) {
   }
 }
 
-const logUp = await putFile('ipad/last-run.txt', log.join('\n') + '\n', '아이패드 실행 기록');
-if (!(logUp.code === 200 || logUp.code === 201)) say(`(기록 저장 실패 ${logUp.code})`);
+// 같은 시간에 GitHub 정리 작업이 돌면 저장이 겹쳐 실패할 수 있어 몇 번 다시 시도
+for (let i = 1; i <= 4; i++) {
+  const logUp = await putFile('ipad/last-run.txt', log.join('\n') + `\n(기록 저장 시도 ${i})\n`, '아이패드 실행 기록');
+  if (logUp.code === 200 || logUp.code === 201) break;
+  console.log(`기록 저장 실패 ${logUp.code}, 다시 시도`);
+  await new Promise((r) => Timer.schedule(1500 * i, false, r));
+}
 
 return results.join(' · ');
