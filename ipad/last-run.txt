@@ -1,0 +1,11 @@
+민식당 특가 수집 시작 2026. 10. 26. 오후 7:30:44 (코드: claude/mart-sale-automation-ydx056)
+[gjs]
+  GET https://gjs.pabal.net/ → 200, 160자
+  ↪ 이동 안내 발견: https://gjs.pabal.net/page/gjs.pabal.net/331342_202610261519.html
+  GET https://gjs.pabal.net/page/gjs.pabal.net/331342_202610261519.html → 200, 357238자
+  ✅ 업로드 inbox/gjs-20261026-193045.html (357321자)
+[ogq]
+  GET https://ogq.pabal.net/ → 200, 160자
+  ↪ 이동 안내 발견: https://ogq.pabal.net/page/ogq.pabal.net/331268_202610261525.html
+  GET https://ogq.pabal.net/page/ogq.pabal.net/331268_202610261525.html → 200, 858558자
+  ✅ 업로드 inbox/ogq-20261026-193048.html (858641자)
