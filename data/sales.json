@@ -1,1305 +1,17 @@
 {
   "date": "2026-10-26",
-  "updated_at": "2026-10-26T19:46:15+09:00",
+  "updated_at": "2026-10-26T19:53:16+09:00",
   "mart_updated": {
-    "gjs": "2026-10-26T19:33:02+09:00",
     "ogq": "2026-10-26T19:33:02+09:00",
-    "dhn": "2026-10-26T19:46:15+09:00"
+    "dhn": "2026-10-26T19:46:15+09:00",
+    "gjs": "2026-10-26T19:53:16+09:00"
   },
   "failed": [],
   "notes": {
-    "gjs": "10월 26일 월요일",
-    "dhn": "#홈마트1등의자신감#10월26~27일(월~화요일)"
+    "dhn": "#홈마트1등의자신감#10월26~27일(월~화요일)",
+    "gjs": "10월 26일 월요일"
   },
   "items": [
-    {
-      "mart": "gjs",
-      "name": "창원단감 특/10개",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "하우스감귤 3Kg/1상자",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "왕바나나 1송이",
-      "price": 3900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "홍갓/청갓 각 1단",
-      "price": 1980,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "다발무 1단",
-      "price": 6980,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "알배기 쌈배추 12입/1박스",
-      "price": 9800,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "호주산 냉동 소불고기 600g/1근",
-      "price": 10800,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "구이용 부채살 100g당",
-      "price": 3300,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "토종 한우 꼬리반골 1벌",
-      "price": 55000,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "가을 활새우 1kg",
-      "price": 29900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "가을 활꽃게 1kg",
-      "price": 12900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "제주 생물갈치 3마리",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "방어회 1접시",
-      "price": 17900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "전어회 1접시",
-      "price": 19900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "연어롤 1팩",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "참푸른메뚜기쌀 26년산 햅쌀 20kg",
-      "price": 52900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "바다담 파래김 16단",
-      "price": 2990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "다시멸치 1.5kg/1박스",
-      "price": 6800,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "맥심모카골드 210T",
-      "price": 29000,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "백설 콩식용유 1.8L",
-      "price": 4590,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "(한가정 2팩 한정)햇반 기획팩 10입/번들",
-      "price": 7990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "해표순창궁 태양초고추장 1.5kg+400g",
-      "price": 5990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "백설 하얀설탕 3kg",
-      "price": 4790,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "청정원순창 초고추장 1kg",
-      "price": 2990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "미왕찹쌀누룽지 288g",
-      "price": 2490,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "농협 딸기잼 370g",
-      "price": 2990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "농심안성탕면 멀티",
-      "price": 2990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "청정원파스타소스 3종/각 600g",
-      "price": 3590,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "모나리자퓨어순수 35M*30롤",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "피죤용기 2.5L",
-      "price": 2990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "사과대추 1팩",
-      "price": 4900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "더상큼한 유자/생강/레몬차 2Kg/1병",
-      "price": 8900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "샤인머스켓 2Kg/1상자",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "냉동 블루베리 1Kg/1봉",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "무화과 1Kg/1상자",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "스테비아방울 3팩",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "신고배 특/5개",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "오렌지 특/8개",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "안동부사 특/6개",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "시나노골드 사과 특/8개",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "그린/골드키위 특/12개",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "샤인머스켓 4Kg/1상자",
-      "price": 19900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "대봉감 4Kg/1상자",
-      "price": 19900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "청도연시 5Kg/1상자",
-      "price": 19900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "오미자&천연당 10Kg/1통",
-      "price": 119000,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "흙생강 100g",
-      "price": 650,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "흙쪽파(작은단) 1단",
-      "price": 1980,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "백오이 5개",
-      "price": 2980,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "하늘내린두부 3kg/1팩",
-      "price": 3980,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "알타리 1단",
-      "price": 2980,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "배추 3포기/1망",
-      "price": 8900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "국산 다진마늘 2kg/1봉",
-      "price": 12800,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "깐마늘(대/중/소) 각 1.6kg/1봉",
-      "price": 12800,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "왕대파 10단/1망",
-      "price": 17800,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "양념 고추장 주물럭 1.3kg/8근",
-      "price": 12900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "대패 우삼겹살 600g/1근",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "호주산 소찜갈비 600g/1근",
-      "price": 15800,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "토종한우 꼬리반골 1벌",
-      "price": 55000,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "제주 은갈치 3마리",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "횟감용생굴 400g/1근",
-      "price": 9800,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "목포 참조기(대) 8마리",
-      "price": 12900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "완도산 활전복(대) 5마리",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "손질 왕가자미 5마리",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "카테일새우 2봉",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "법성포 영광굴비 1두릅",
-      "price": 19800,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "초밥 12P/1팩",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "연어회 1접시",
-      "price": 17900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "광어회 1접시",
-      "price": 19900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "매생이 갈비탕 1팩",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "한방왕족발(대) 1팩",
-      "price": 27000,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "한방미니족발 1팩",
-      "price": 13000,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "프리미엄 닭강정 1팩",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "콩비지찌개 1팩",
-      "price": 6500,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "꽃게무침 1팩",
-      "price": 8900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "화덕고등어구이 1팩",
-      "price": 7900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "바다담 재래김 16단",
-      "price": 2990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "황태채 300g",
-      "price": 13900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "맛진미 300g",
-      "price": 9990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "백진미 300G",
-      "price": 6990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "바다내음미역 200G",
-      "price": 3990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "김밥용김 20매",
-      "price": 3490,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "다시멸치 300g",
-      "price": 4990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "바다담김가루 50G",
-      "price": 2990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "대왕쥐포 5장",
-      "price": 6990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "해바라기씨 1KG",
-      "price": 4990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "바다담김가루 1kg",
-      "price": 17900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "파래자반 1장",
-      "price": 17800,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "백진미 700g",
-      "price": 17900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "국산 마른수염새우 700g",
-      "price": 9990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "육수용 다시마(상파) 700g",
-      "price": 9990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "미역 600g",
-      "price": 9990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "볶음땅콩 3.75kg/1관",
-      "price": 26900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "26년 햅쌀 참푸른메뚜기쌀 20kg",
-      "price": 52900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "25년산 풍미 20kg",
-      "price": 59900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "칼로스 20kg",
-      "price": 48900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "26년 햅쌀 참푸른메뚜기쌀 10kg",
-      "price": 29900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "26년 햅쌀 오대미 4kg",
-      "price": 21900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "찹쌀 4kg",
-      "price": 17900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "찰보리 4kg",
-      "price": 9990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "찰흑미 600G*2",
-      "price": 6990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "발아현미21곡 2kg*2",
-      "price": 9990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "오뚜기한강라면 멀티",
-      "price": 4490,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "백설오리지널후랑크 460g",
-      "price": 4990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "건국두유검은콩 190ml*24",
-      "price": 7990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "(한 가정 2팩 한정)햇반 10입/팩",
-      "price": 7990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "백설콩식용유 1.8L",
-      "price": 4590,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "동원참치액 900g",
-      "price": 3990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "순창궁태양초고추장 1.5kg+400g",
-      "price": 5990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "해찬들 재래식된장 2kg+300g",
-      "price": 6990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "해천굴소스 520g",
-      "price": 1990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "오뚜기 3분쇠고기카레 200g",
-      "price": 950,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "청정원 파스타소스 600g",
-      "price": 3590,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "압도적 소갈비탕 1.5kg",
-      "price": 8990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "블랙트러플 하몽크래커 14입",
-      "price": 2990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "롯데카스타드 230g",
-      "price": 3490,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "삼양라면 멀티",
-      "price": 2790,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "오땔오팜 700g",
-      "price": 6990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "비비고왕교자 1.3kg",
-      "price": 8990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "동원365순수목장우유 900ml",
-      "price": 1590,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "대림알뜰김밥세트 510g",
-      "price": 3990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "모나리자 퓨어순수 25m*30롤",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "크리넥스 울트라클린 25m*30롤",
-      "price": 14900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "프렌코 키친타올 100매*6",
-      "price": 2990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "리큐 3L",
-      "price": 6990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "리오퐁 1L",
-      "price": 990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "케라시스클리닉 샴푸/린스 각 600ml",
-      "price": 3990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "온더바디 플로럴가든 바디워시 950g",
-      "price": 6990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "2080파워쉴드 치약 140g*3",
-      "price": 3990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "페리오 토탈7칫솔 4입",
-      "price": 4990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "풍성한진간장S 13L",
-      "price": 14900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "마산몽고진간장 13L",
-      "price": 23900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "샘표국간장 14L",
-      "price": 26900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "샘표진간장S 15L",
-      "price": 38900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "샘표진간장금F3 15L",
-      "price": 65900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "샘표양조간장501 15L",
-      "price": 74900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "베스트코 왕새우튀김 300g",
-      "price": 2990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "에버크리스프콩식용유 18L",
-      "price": 42900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "동원참치덕용 1.88kg",
-      "price": 16900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "백설하얀설탕 15kg",
-      "price": 16900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "백설쇠고기다시다 2.2kg",
-      "price": 29900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "미원노말 3kg",
-      "price": 29900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "이츠웰진한다시 2KG",
-      "price": 9990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "에버크리스프볶음참깨 1kg",
-      "price": 5990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "이엔한식나라(MSG) 3kg",
-      "price": 9990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "오뚜기골드마요네즈 3.2kg",
-      "price": 13900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "롯데프레시마요네즈 3.2kg",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "이엔더진한참맛기름 1.5L",
-      "price": 5790,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "해표고추맛기름 1.8L",
-      "price": 6990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "이엔스위트콘 2.95kg",
-      "price": 3690,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "오뚜기라면사리 48입/1박스",
-      "price": 12900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "학표구포국수 3kg",
-      "price": 4490,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "부라보 12kg",
-      "price": 13900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "이엔알뜰고구마당면 14kg",
-      "price": 37900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "이엔초고추장소스골드 13kg",
-      "price": 21500,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "순창궁 태양초고추장 14kg",
-      "price": 29900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "순창궁재래된장 14kg",
-      "price": 24900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "진미 잘되는 맛집 쌈장 14kg",
-      "price": 28900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "오양 하이비엔나 1KG",
-      "price": 3990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "농우 냉동 다진마늘 1kg",
-      "price": 1990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "식재명가순살돈까스 3.12KG",
-      "price": 19900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "쉐프큐사각어묵 2.5kg",
-      "price": 7990,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
     {
       "mart": "ogq",
       "name": "양파 15Kg/1망",
@@ -4618,6 +3330,1294 @@
       "price": 35000,
       "original_price": null,
       "section": "수산코너",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "창원단감 특/10개",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "하우스감귤 3Kg/1상자",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "왕바나나 1송이",
+      "price": 3900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "홍갓/청갓 각 1단",
+      "price": 1980,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "다발무 1단",
+      "price": 6980,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "알배기 쌈배추 12입/1박스",
+      "price": 9800,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "호주산 냉동 소불고기 600g/1근",
+      "price": 10800,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "구이용 부채살 100g당",
+      "price": 3300,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "토종 한우 꼬리반골 1벌",
+      "price": 55000,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "가을 활새우 1kg",
+      "price": 29900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "가을 활꽃게 1kg",
+      "price": 12900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "제주 생물갈치 3마리",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "방어회 1접시",
+      "price": 17900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "전어회 1접시",
+      "price": 19900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "연어롤 1팩",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "참푸른메뚜기쌀 26년산 햅쌀 20kg",
+      "price": 52900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "바다담 파래김 16단",
+      "price": 2990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "다시멸치 1.5kg/1박스",
+      "price": 6800,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "맥심모카골드 210T",
+      "price": 29000,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "백설 콩식용유 1.8L",
+      "price": 4590,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "(한가정 2팩 한정)햇반 기획팩 10입/번들",
+      "price": 7990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "해표순창궁 태양초고추장 1.5kg+400g",
+      "price": 5990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "백설 하얀설탕 3kg",
+      "price": 4790,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "청정원순창 초고추장 1kg",
+      "price": 2990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "미왕찹쌀누룽지 288g",
+      "price": 2490,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "농협 딸기잼 370g",
+      "price": 2990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "농심안성탕면 멀티",
+      "price": 2990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "청정원파스타소스 3종/각 600g",
+      "price": 3590,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "모나리자퓨어순수 35M*30롤",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "피죤용기 2.5L",
+      "price": 2990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "사과대추 1팩",
+      "price": 4900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "더상큼한 유자/생강/레몬차 2Kg/1병",
+      "price": 8900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "샤인머스켓 2Kg/1상자",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "냉동 블루베리 1Kg/1봉",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "무화과 1Kg/1상자",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "스테비아방울 3팩",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "신고배 특/5개",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "오렌지 특/8개",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "안동부사 특/6개",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "시나노골드 사과 특/8개",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "그린/골드키위 특/12개",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "샤인머스켓 4Kg/1상자",
+      "price": 19900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "대봉감 4Kg/1상자",
+      "price": 19900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "청도연시 5Kg/1상자",
+      "price": 19900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "오미자&천연당 10Kg/1통",
+      "price": 119000,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "흙생강 100g",
+      "price": 650,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "흙쪽파(작은단) 1단",
+      "price": 1980,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "백오이 5개",
+      "price": 2980,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "하늘내린두부 3kg/1팩",
+      "price": 3980,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "알타리 1단",
+      "price": 2980,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "배추 3포기/1망",
+      "price": 8900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "국산 다진마늘 2kg/1봉",
+      "price": 12800,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "깐마늘(대/중/소) 각 1.6kg/1봉",
+      "price": 12800,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "왕대파 10단/1망",
+      "price": 17800,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "양념 고추장 주물럭 1.3kg/8근",
+      "price": 12900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "대패 우삼겹살 600g/1근",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "호주산 소찜갈비 600g/1근",
+      "price": 15800,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "토종한우 꼬리반골 1벌",
+      "price": 55000,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "제주 은갈치 3마리",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "횟감용생굴 400g/1근",
+      "price": 9800,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "목포 참조기(대) 8마리",
+      "price": 12900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "완도산 활전복(대) 5마리",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "손질 왕가자미 5마리",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "카테일새우 2봉",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "법성포 영광굴비 1두릅",
+      "price": 19800,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "초밥 12P/1팩",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "연어회 1접시",
+      "price": 17900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "광어회 1접시",
+      "price": 19900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "매생이 갈비탕 1팩",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "한방왕족발(대) 1팩",
+      "price": 27000,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "한방미니족발 1팩",
+      "price": 13000,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "프리미엄 닭강정 1팩",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "콩비지찌개 1팩",
+      "price": 6500,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "꽃게무침 1팩",
+      "price": 8900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "화덕고등어구이 1팩",
+      "price": 7900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "바다담 재래김 16단",
+      "price": 2990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "황태채 300g",
+      "price": 13900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "맛진미 300g",
+      "price": 9990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "백진미 300G",
+      "price": 6990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "바다내음미역 200G",
+      "price": 3990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "김밥용김 20매",
+      "price": 3490,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "다시멸치 300g",
+      "price": 4990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "바다담김가루 50G",
+      "price": 2990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "대왕쥐포 5장",
+      "price": 6990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "해바라기씨 1KG",
+      "price": 4990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "바다담김가루 1kg",
+      "price": 17900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "파래자반 1장",
+      "price": 17800,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "백진미 700g",
+      "price": 17900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "국산 마른수염새우 700g",
+      "price": 9990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "육수용 다시마(상파) 700g",
+      "price": 9990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "미역 600g",
+      "price": 9990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "볶음땅콩 3.75kg/1관",
+      "price": 26900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "26년 햅쌀 참푸른메뚜기쌀 20kg",
+      "price": 52900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "25년산 풍미 20kg",
+      "price": 59900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "칼로스 20kg",
+      "price": 48900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "26년 햅쌀 참푸른메뚜기쌀 10kg",
+      "price": 29900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "26년 햅쌀 오대미 4kg",
+      "price": 21900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "찹쌀 4kg",
+      "price": 17900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "찰보리 4kg",
+      "price": 9990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "찰흑미 600G*2",
+      "price": 6990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "발아현미21곡 2kg*2",
+      "price": 9990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "오뚜기한강라면 멀티",
+      "price": 4490,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "백설오리지널후랑크 460g",
+      "price": 4990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "건국두유검은콩 190ml*24",
+      "price": 7990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "(한 가정 2팩 한정)햇반 10입/팩",
+      "price": 7990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "백설콩식용유 1.8L",
+      "price": 4590,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "동원참치액 900g",
+      "price": 3990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "순창궁태양초고추장 1.5kg+400g",
+      "price": 5990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "해찬들 재래식된장 2kg+300g",
+      "price": 6990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "해천굴소스 520g",
+      "price": 1990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "오뚜기 3분쇠고기카레 200g",
+      "price": 950,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "청정원 파스타소스 600g",
+      "price": 3590,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "압도적 소갈비탕 1.5kg",
+      "price": 8990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "블랙트러플 하몽크래커 14입",
+      "price": 2990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "롯데카스타드 230g",
+      "price": 3490,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "삼양라면 멀티",
+      "price": 2790,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "오땔오팜 700g",
+      "price": 6990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "비비고왕교자 1.3kg",
+      "price": 8990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "동원365순수목장우유 900ml",
+      "price": 1590,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "대림알뜰김밥세트 510g",
+      "price": 3990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "모나리자 퓨어순수 25m*30롤",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "크리넥스 울트라클린 25m*30롤",
+      "price": 14900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "프렌코 키친타올 100매*6",
+      "price": 2990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "리큐 3L",
+      "price": 6990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "리오퐁 1L",
+      "price": 990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "케라시스클리닉 샴푸/린스 각 600ml",
+      "price": 3990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "온더바디 플로럴가든 바디워시 950g",
+      "price": 6990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "2080파워쉴드 치약 140g*3",
+      "price": 3990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "페리오 토탈7칫솔 4입",
+      "price": 4990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "풍성한진간장S 13L",
+      "price": 14900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "마산몽고진간장 13L",
+      "price": 23900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "샘표국간장 14L",
+      "price": 26900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "샘표진간장S 15L",
+      "price": 38900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "샘표진간장금F3 15L",
+      "price": 65900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "샘표양조간장501 15L",
+      "price": 74900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "베스트코 왕새우튀김 300g",
+      "price": 2990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "에버크리스프콩식용유 18L",
+      "price": 42900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "동원참치덕용 1.88kg",
+      "price": 16900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "백설하얀설탕 15kg",
+      "price": 16900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "백설쇠고기다시다 2.2kg",
+      "price": 29900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "미원노말 3kg",
+      "price": 29900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "이츠웰진한다시 2KG",
+      "price": 9990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "에버크리스프볶음참깨 1kg",
+      "price": 5990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "이엔한식나라(MSG) 3kg",
+      "price": 9990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "오뚜기골드마요네즈 3.2kg",
+      "price": 13900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "롯데프레시마요네즈 3.2kg",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "이엔더진한참맛기름 1.5L",
+      "price": 5790,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "해표고추맛기름 1.8L",
+      "price": 6990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "이엔스위트콘 2.95kg",
+      "price": 3690,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "오뚜기라면사리 48입/1박스",
+      "price": 12900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "학표구포국수 3kg",
+      "price": 4490,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "부라보 12kg",
+      "price": 13900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "이엔알뜰고구마당면 14kg",
+      "price": 37900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "이엔초고추장소스골드 13kg",
+      "price": 21500,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "순창궁 태양초고추장 14kg",
+      "price": 29900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "순창궁재래된장 14kg",
+      "price": 24900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "진미 잘되는 맛집 쌈장 14kg",
+      "price": 28900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "오양 하이비엔나 1KG",
+      "price": 3990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "농우 냉동 다진마늘 1kg",
+      "price": 1990,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "식재명가순살돈까스 3.12KG",
+      "price": 19900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "쉐프큐사각어묵 2.5kg",
+      "price": 7990,
+      "original_price": null,
+      "section": "",
       "badge": ""
     }
   ]
