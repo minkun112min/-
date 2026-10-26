@@ -1,9 +1,10 @@
 name: 아이패드가 보낸 마트 페이지 정리
 
-# 아이패드 단축어가 inbox/ 에 페이지를 올리면 바로 특가로 바꿔 저장합니다.
+# 아이패드가 inbox/ 에 페이지를 올리면 바로 특가로 바꿔 저장합니다.
 on:
   push:
-    paths: ["inbox/**"]
+    branches: [main]
+    paths: ["inbox/**", ".github/workflows/inbox.yml", "scripts/**"]
   workflow_dispatch: {}
 
 concurrency:
@@ -18,17 +19,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install requests beautifulsoup4
-      - run: python scripts/process_inbox.py
-      - name: 저장
-        run: |
-          git config user.name "minsikdang-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet && exit 0
-          git commit -m "아이패드가 보낸 특가 반영 $(TZ=Asia/Seoul date '+%F %H:%M')"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+      - name: 처리하고 저장 (겹치면 다시 처리)
+        run: bash scripts/save_and_push.sh "아이패드가 보낸 특가 반영 $(TZ=Asia/Seoul date '+%F %H:%M')" python scripts/process_inbox.py
