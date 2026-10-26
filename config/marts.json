@@ -10,21 +10,21 @@
     },
     {
       "id": "gjs",
-      "name": "마트 (gjs)",
+      "name": "광주식자재마트",
       "color": "#e8590c",
       "type": "text",
       "inbox": true,
-      "url": "https://gjs.pabal.net/main.html",
-      "_메모": "해외 접속 차단 → 아이패드 단축어가 매일 올림. 첫 원본을 받으면 전용 읽기 규칙으로 바꿀 예정"
+      "url": "https://gjs.pabal.net",
+      "_메모": "광주 중앙로. 해외 접속 차단 → 아이패드 단축어가 매일 올림. 오늘 행사 페이지 = 도메인 첫 화면"
     },
     {
       "id": "ogq",
-      "name": "마트 (ogq)",
+      "name": "엘마트 광주점",
       "color": "#1971c2",
       "type": "text",
       "inbox": true,
-      "url": "https://ogq.pabal.net/main.html",
-      "_메모": "해외 접속 차단 → 아이패드 단축어가 매일 올림. 받은 주소는 날짜 페이지(331268_202610261525.html)였음"
+      "url": "https://ogq.pabal.net",
+      "_메모": "초월읍. 해외 접속 차단 → 아이패드 단축어가 매일 올림. 오늘 행사 페이지 = 도메인 첫 화면"
     },
     {
       "id": "ezip",
