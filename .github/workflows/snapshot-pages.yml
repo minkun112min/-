@@ -4,7 +4,7 @@ name: 마트 페이지 내려받기 (구조 확인용)
 on:
   push:
     branches: ["claude/**"]
-    paths: [".github/workflows/snapshot-pages.yml", "config/marts.json"]
+    paths: [".github/workflows/snapshot-pages.yml"]
   workflow_dispatch: {}
 
 permissions:
@@ -30,6 +30,13 @@ jobs:
               -w "$id http=%{http_code} size=%{size_download} type=%{content_type} final=%{url_effective}\n" \
               "$url" >> debug/pages/result.txt 2>> debug/pages/result.txt || echo "$id 실패" >> debug/pages/result.txt
           done < debug/pages/urls.txt
+          # 홈마트처럼 메인에 '행사보기' 링크만 있는 경우 그 페이지도 받기
+          VIEW=$(grep -oE '/smart/view/[A-Za-z0-9]+\?home=[A-Za-z0-9]+' debug/pages/dhn.html | head -1)
+          if [ -n "$VIEW" ]; then
+            curl -sSL -A "$UA" --max-time 40 -o debug/pages/dhn_view.html \
+              -w "dhn_view http=%{http_code} size=%{size_download} final=%{url_effective}\n" \
+              "http://smart.dhn.kr$VIEW" >> debug/pages/result.txt 2>&1 || true
+          fi
           cat debug/pages/result.txt
       - name: 저장
         run: |
