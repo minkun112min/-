@@ -61,7 +61,12 @@
     let configMarts = [];
     try { configMarts = (await loadJSON('config/marts.json')).marts || []; } catch (e) { /* 파일로 열었을 때 */ }
     const saved = LS.get('marts', null);
-    state.marts = saved || configMarts.map(({ id, name, color }) => ({ id, name, color }));
+    const fromConfig = configMarts.map(({ id, name, color, url }) => ({ id, name, color, url: url || '' }));
+    // 이 휴대폰에서 바꾼 이름·색은 유지하고, 새로 생긴 마트와 홈페이지 주소는 설정 파일에서 채움
+    state.marts = saved
+      ? [...saved.map((m) => ({ ...m, url: (fromConfig.find((c) => c.id === m.id) || {}).url || m.url || '' })),
+         ...fromConfig.filter((c) => !saved.some((m) => m.id === c.id) && !(LS.get('removedMarts', []).includes(c.id)))]
+      : fromConfig;
     if (!state.marts.length) state.marts = [{ id: 'mart-a', name: '우리동네마트', color: PALETTE[0] }];
 
     try {
@@ -133,7 +138,16 @@
       `<span class="tag">${esc(it.category || '기타')}</span>`;
   }
 
+  function renderLinks() {
+    const withUrl = state.marts.filter((m) => m.url);
+    document.getElementById('mart-links').innerHTML = withUrl.length
+      ? '<p class="links-title">마트 특가 페이지 바로가기</p><div class="links">' + withUrl.map((m) =>
+          `<a class="link" href="${esc(m.url)}" target="_blank" rel="noopener"><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)} ↗</a>`).join('') + '</div>'
+      : '';
+  }
+
   function renderSales() {
+    renderLinks();
     const notice = document.getElementById('data-notice');
     const msgs = [];
     if (state.remoteSample && state.remoteItems.length) msgs.push('지금 보이는 자동 수집 특가는 <b>예시</b>예요. 마트 홈페이지 주소를 설정하면 매일 아침 진짜 특가로 바뀝니다.');
@@ -159,7 +173,7 @@
       const m = martById(martId);
       list.sort((a, b) => discount(b) - discount(a));
       return `<div class="mart-group">
-        <div class="mart-head"><h3><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)}</h3><small>${list.length}개 특가</small></div>
+        <div class="mart-head"><h3><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)}</h3><small>${list.length}개 특가${m.url ? ` · <a href="${esc(m.url)}" target="_blank" rel="noopener">페이지 ↗</a>` : ''}</small></div>
         ${list.map((it) => {
           const inCart = !!state.cart[keyOf(it)];
           return `<div class="item">
@@ -330,6 +344,7 @@
         if (state.marts.length <= 1) { toast('마트는 하나 이상 있어야 해요'); return; }
         if (!confirm(`'${martById(d.mdel).name}'을(를) 목록에서 지울까요?`)) return;
         state.marts = state.marts.filter((m) => m.id !== d.mdel);
+        LS.set('removedMarts', [...LS.get('removedMarts', []), d.mdel]);
         saveMarts(); renderAll(); return;
       }
 

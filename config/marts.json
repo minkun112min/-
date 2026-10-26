@@ -1,41 +1,33 @@
 {
-  "_설명": "마트 목록입니다. 홈페이지에서 자동으로 특가를 가져오려면 url과 selectors를 채우세요. 비워두면 카톡 붙여넣기로만 등록합니다.",
+  "_설명": "마트 목록입니다. url은 앱의 '특가 페이지 바로가기'와 매일 아침 자동 수집에 쓰입니다. selectors를 채우면 그 위치에서 정확히 읽고, 비워두면 페이지 글자에서 '품목 ○○원' 줄을 찾습니다.",
   "marts": [
     {
-      "id": "mart-a",
-      "name": "OO마트",
+      "id": "gjs",
+      "name": "마트1 (gjs)",
       "color": "#e8590c",
-      "url": "",
-      "selectors": {
-        "item": "",
-        "name": "",
-        "price": "",
-        "original_price": ""
-      }
+      "url": "https://gjs.pabal.net/main.html",
+      "selectors": { "item": "", "name": "", "price": "", "original_price": "" }
     },
     {
-      "id": "mart-b",
-      "name": "XX농협하나로",
+      "id": "dhn",
+      "name": "마트2 (스마트전단)",
       "color": "#2f9e44",
-      "url": "",
-      "selectors": {
-        "item": "",
-        "name": "",
-        "price": "",
-        "original_price": ""
-      }
+      "url": "http://smart.dhn.kr/smart/shome/ckdd1et5o62v",
+      "selectors": { "item": "", "name": "", "price": "", "original_price": "" }
     },
     {
-      "id": "mart-c",
-      "name": "△△식자재마트",
+      "id": "ogq",
+      "name": "마트3 (ogq)",
       "color": "#1971c2",
-      "url": "",
-      "selectors": {
-        "item": "",
-        "name": "",
-        "price": "",
-        "original_price": ""
-      }
+      "url": "https://ogq.pabal.net/page/ogq.pabal.net/331268_202610261525.html",
+      "selectors": { "item": "", "name": "", "price": "", "original_price": "" }
+    },
+    {
+      "id": "ezip",
+      "name": "마트4 (오늘의 특가)",
+      "color": "#9c36b5",
+      "url": "http://l.ezip.kr/v2024/today_product/discount_pro.php?mart_code=AA006462&com_cnt=&testchk=",
+      "selectors": { "item": "", "name": "", "price": "", "original_price": "" }
     }
   ]
 }

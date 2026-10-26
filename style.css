@@ -189,3 +189,14 @@ textarea { resize: vertical; margin-bottom: 10px; }
   font-size: 14px; transition: .2s; max-width: calc(100% - 32px); text-align: center;
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* 특가 페이지 바로가기 */
+.links-title { margin: 12px 2px 6px; font-size: 13px; color: var(--muted); }
+.links { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.link {
+  display: flex; align-items: center; gap: 6px; padding: 10px 12px; border-radius: 10px;
+  background: var(--card); border: 1px solid var(--line); color: var(--text);
+  text-decoration: none; font-size: 14px; font-weight: 600; min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.mart-head small a { color: var(--brand); }
