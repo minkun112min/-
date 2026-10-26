@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" type="image/svg+xml" href="/cdn/rocket/channel-home-web/production/7cdbcf7/assets/favicon-CmO6ClOa.ico" />
+    <script type="text/javascript" src="//t1.kakaocdn.net/tiara/js/v1/tiara-1.2.0.min.js"></script>
+    <script type="text/javascript" src="https://dapi.kakao.com/maps-internal/v2/sdk.js?appkey=80ac273890c06b6727121e2390b200cb&amp;autoload=false"></script>
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js"
+      integrity="sha384-70k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh"
+      crossorigin="anonymous"></script>
+    <title>카카오톡채널 - 홈마트 곤지암점</title><meta property="og:type" content="profile"><meta property="og:site_name" content="카카오톡채널 - 홈마트 곤지암점"><meta property="og:url" content="http://pf.kakao.com/_xajLmG"><meta property="og:article:author" content="홈마트 곤지암점"><meta property="og:title" content="홈마트 곤지암점"><meta property="og:description" content="안녕하세요 홈마트 곤지암점입니다.
+많은 이용 부탁드립니다.^^"><meta name="description" content="안녕하세요 홈마트 곤지암점입니다.
+많은 이용 부탁드립니다.^^"><meta property="og:image" content="https://k.kakaocdn.net/dn/b5amyo/btsJZ9Y9Hw1/YZ0Mwp5pqaX3ITrlGPIPDk/img_m.jpg"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://k.kakaocdn.net/dn/b5amyo/btsJZ9Y9Hw1/YZ0Mwp5pqaX3ITrlGPIPDk/img_m.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"홈마트 곤지암점","url":"http://pf.kakao.com/_xajLmG","additionalProperty":[{"@type":"PropertyValue","name":"verificationStatus","value":"official"},{"@type":"PropertyValue","name":"blocked","value":false}]}</script>
+    <title>카카오톡채널</title>
+    <script>
+      // 콘텐츠형 채널홈 배경색 prefetch — React 로딩 전 흰색 플래시 방지
+      // window.__PROFILE_HOME_PREFETCH__ 에 Promise를 저장하여 loader에서 재사용
+      (function () {
+        var match = location.pathname.match(/^\/(_[a-zA-Z0-9]+)\/?$/);
+        if (!match) return;
+        var encodedId = match[1];
+        var promise = fetch('/rocket-web/web/profiles/' + encodedId + '/home', {credentials: 'include'}).then(
+          function (res) {
+            return res.json();
+          }
+        );
+
+        window.__PROFILE_HOME_PREFETCH__ = {encodedId: encodedId, promise: promise};
+
+        promise
+          .then(function (data) {
+            if (data.home_type !== 'content') return;
+            var media = data.content_home && data.content_home.background_media;
+            var color = '#788590';
+            if (media) {
+              if (media.media_type === 'image' || media.media_type === 'video') {
+                var avg = media.image && media.image.avg;
+                if (avg) color = avg.charAt(0) === '#' ? avg : '#' + avg;
+              } else if (media.media_type === 'color' && media.color) {
+                color = media.color.charAt(0) === '#' ? media.color : '#' + media.color;
+              }
+            }
+            var root = document.getElementById('root');
+            document.documentElement.style.backgroundColor = color;
+            document.body.style.backgroundColor = color;
+            if (root) root.style.backgroundColor = color;
+          })
+          .catch(function () {});
+      })();
+    </script>
+    <script type="module" crossorigin src="/cdn/rocket/channel-home-web/production/7cdbcf7/assets/index-Dr5avugE.js"></script>
+    <link rel="modulepreload" crossorigin href="/cdn/rocket/channel-home-web/production/7cdbcf7/assets/@lodash-C98F2iIV.js">
+    <link rel="modulepreload" crossorigin href="/cdn/rocket/channel-home-web/production/7cdbcf7/assets/vendor-DfuyRtPy.js">
+    <link rel="stylesheet" crossorigin href="/cdn/rocket/channel-home-web/production/7cdbcf7/assets/vendor-C0mcBp0I.css">
+    <link rel="stylesheet" crossorigin href="/cdn/rocket/channel-home-web/production/7cdbcf7/assets/index-D9lC8O_E.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body style="background-color: #fff">
+    <div id="root"></div>
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="/cdn/rocket/channel-home-web/production/7cdbcf7/assets/polyfills-legacy-Bx0MF3jF.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="/cdn/rocket/channel-home-web/production/7cdbcf7/assets/index-legacy-BrAqFOaH.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
