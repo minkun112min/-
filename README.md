@@ -24,13 +24,20 @@
 (카카오톡은 외부 프로그램이 채널 메시지를 읽어 오는 것을 막아 두어서, 복사·붙여넣기가 가장 확실한 방법입니다.)
 
 ### 2) 마트 홈페이지 → 매일 아침 자동 수집
+
+| 마트 | 자동 수집 | 이유 |
+|---|---|---|
+| 홈마트 곤지암 (smart.dhn.kr) | ✅ 됨 | 코너별(야채·정육·수산 등) 상품 80여 개를 가져옵니다 |
+| gjs.pabal.net / ogq.pabal.net | ❌ 바로가기만 | 해외 서버(GitHub)에서 접속이 막혀 있음 |
+| l.ezip.kr 오늘의 특가 | ❌ 바로가기만 | 자동 접속 방지(보안 확인 화면)가 있음 |
+
 `.github/workflows/daily-sales.yml` 이 **매일 오전 7시(한국시간)** 에 `scripts/fetch_sales.py` 를 실행해 `data/sales.json` 을 갱신합니다.
 
 자동 수집을 켜려면 `config/marts.json` 에서 마트별로 채워 주세요.
 - `url`: 특가가 올라오는 홈페이지 주소
-- `selectors`: 상품/상품명/가격이 들어 있는 부분(CSS 선택자). 비워두면 페이지 글자에서 "품목 ○○원" 줄을 찾아봅니다.
+- `type`: `dhn_smart`(스마트전단) / `selectors`(CSS 선택자 지정) / `text`(글자에서 '품목 ○○원' 찾기) / `link`(바로가기만)
 
-> 지금 `data/sales.json` 에 들어 있는 특가는 **예시 데이터**입니다.
+> 매일 자동 실행은 GitHub 규칙상 **기본 브랜치(main)** 에 합쳐진 뒤부터 돌아갑니다.
 
 ## 휴대폰에서 열기 (GitHub Pages)
 1. 이 브랜치를 `main` 에 합칩니다.
@@ -44,5 +51,6 @@ parser.js                       카톡 글에서 품목·가격 찾기
 config/marts.json               마트 목록과 홈페이지 수집 설정
 data/sales.json                 자동 수집된 오늘 특가
 scripts/fetch_sales.py          홈페이지 특가 수집기
-scripts/test_parser.js          인식 테스트 (node scripts/test_parser.js)
+scripts/test_parser.js          카톡 인식 테스트 (node scripts/test_parser.js)
+scripts/test_fetch.py           수집기 테스트 (python scripts/test_fetch.py)
 ```

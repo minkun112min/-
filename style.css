@@ -83,7 +83,8 @@ main { max-width: 720px; margin: 0 auto; padding: 14px 16px; }
   display: flex; align-items: center; justify-content: space-between;
   margin: 0 2px 8px;
 }
-.mart-head h3 { margin: 0; font-size: 17px; display: flex; align-items: center; gap: 8px; }
+.mart-head { flex-wrap: wrap; gap: 2px 10px; }
+.mart-head h3 { margin: 0; font-size: 17px; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
 .mart-head small { color: var(--muted); font-size: 13px; }
 
@@ -200,3 +201,5 @@ textarea { resize: vertical; margin-bottom: 10px; }
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .mart-head small a { color: var(--brand); }
+.badge { font-size: 11px; color: #fff; background: var(--brand); border-radius: 6px; padding: 0 5px; font-weight: 700; }
+.mart-head small { text-align: left; }

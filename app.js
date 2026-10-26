@@ -20,7 +20,11 @@
   const TODAY = todayStr();
   const won = (n) => (n || 0).toLocaleString('ko-KR') + '원';
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const keyOf = (it) => it.mart + '::' + it.name;
+  const keyOf = (it) => it.mart + '::' + it.name + '::' + it.price;
+  // 마트 홈페이지의 코너 이름으로 분류를 바로잡기
+  const SECTION_CATEGORY = [
+    [/야채|채소|청과/, '채소', '🥬'], [/정육|축산|고기/, '육류', '🥩'], [/수산|생선|해산/, '수산', '🐟'], [/과일/, '과일', '🍎'],
+  ];
   const PALETTE = ['#e8590c', '#2f9e44', '#1971c2', '#9c36b5', '#c2255c', '#0c8599', '#e67700'];
 
   // ---------- 상태 ----------
@@ -29,6 +33,7 @@
     remoteItems: [],
     remoteDate: null,
     remoteSample: false,
+    remoteNotes: {},
     manualItems: LS.get('manual.' + TODAY, []),
     cart: LS.get('cart', {}), // key -> { item, qty, bought }
     filterCat: '전체',
@@ -45,6 +50,8 @@
     const map = new Map();
     for (const it of [...state.remoteItems, ...state.manualItems]) {
       const full = { ...categorize(it.name), ...it };
+      const sec = SECTION_CATEGORY.find(([re]) => re.test(it.section || ''));
+      if (sec && full.category === '기타') { full.category = sec[1]; full.icon = sec[2]; }
       map.set(keyOf(full), full); // 같은 마트·같은 이름이면 나중 것(직접 입력)이 우선
     }
     return [...map.values()];
@@ -74,6 +81,7 @@
       state.remoteItems = data.items || [];
       state.remoteDate = data.date || null;
       state.remoteSample = !!data.sample;
+      state.remoteNotes = data.notes || {};
     } catch (e) { /* 자동 수집 데이터 없음 */ }
 
     const d = new Date();
@@ -135,6 +143,8 @@
     return `<span class="price">${won(it.price)}</span>` +
       (it.original_price && it.original_price > it.price ? `<span class="orig">${won(it.original_price)}</span>` : '') +
       (off ? `<span class="off">${off}%↓</span>` : '') +
+      (it.badge ? `<span class="badge">${esc(it.badge)}</span>` : '') +
+      (it.section ? `<span class="tag">${esc(it.section)}</span>` : '') +
       `<span class="tag">${esc(it.category || '기타')}</span>`;
   }
 
@@ -173,7 +183,7 @@
       const m = martById(martId);
       list.sort((a, b) => discount(b) - discount(a));
       return `<div class="mart-group">
-        <div class="mart-head"><h3><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)}</h3><small>${list.length}개 특가${m.url ? ` · <a href="${esc(m.url)}" target="_blank" rel="noopener">페이지 ↗</a>` : ''}</small></div>
+        <div class="mart-head"><h3><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)}</h3><small>${state.remoteNotes[martId] ? esc(state.remoteNotes[martId].replace(/#/g, ' ').trim()) + ' · ' : ''}${list.length}개 특가${m.url ? ` · <a href="${esc(m.url)}" target="_blank" rel="noopener">페이지 ↗</a>` : ''}</small></div>
         ${list.map((it) => {
           const inCart = !!state.cart[keyOf(it)];
           return `<div class="item">

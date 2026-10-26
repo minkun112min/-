@@ -1,9 +1,0 @@
-curl: (28) Connection timed out after 40000 milliseconds
-gjs http=000 size=0 type= final=https://gjs.pabal.net/main.html
-gjs 실패
-dhn http=200 size=27366 type=text/html; charset=UTF-8 final=http://smart.dhn.kr/smart/shome/ckdd1et5o62v
-curl: (28) Connection timed out after 40001 milliseconds
-ogq http=000 size=0 type= final=https://ogq.pabal.net/page/ogq.pabal.net/331268_202610261525.html
-ogq 실패
-ezip http=200 size=1646 type=text/html final=http://l.ezip.kr/v2024/today_product/discount_pro.php?mart_code=AA006462&com_cnt=&testchk=
-dhn_view http=200 size=304632 final=http://smart.dhn.kr/smart/view/ckdd1et3xxej?home=ckdd1et5o62v

@@ -1,19 +1,20 @@
 """마트 홈페이지에서 오늘의 특가를 가져와 data/sales.json 에 저장합니다.
 
-config/marts.json 에서 url 과 selectors 가 채워진 마트만 수집합니다.
-- selectors.item           : 특가 상품 하나를 감싸는 요소 (CSS 선택자)
-- selectors.name           : 그 안의 상품명
-- selectors.price          : 그 안의 판매가(할인가)
-- selectors.original_price : 그 안의 정상가 (없으면 비워두기)
-item 선택자를 비워두면 페이지 글자 전체를 카톡 붙여넣기와 같은 방식으로 읽습니다.
+config/marts.json 의 마트마다 "type" 으로 읽는 방법을 정합니다.
+- "dhn_smart" : smart.dhn.kr 스마트전단 (메인 → '행사보기' 페이지의 상품 목록)
+- "selectors" : 일반 홈페이지. selectors 에 CSS 선택자를 적어 둠
+- "text"      : 페이지 글자에서 '품목 ○○원' 줄을 찾음
+- "link"      : 자동 수집하지 않음 (앱의 바로가기 버튼만)
 
 실행: python scripts/fetch_sales.py
+       python scripts/fetch_sales.py --file dhn=tests/fixtures/dhn_view.html   (저장된 파일로 시험)
 """
 import json
 import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -22,40 +23,107 @@ ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config" / "marts.json"
 OUTPUT = ROOT / "data" / "sales.json"
 KST = timezone(timedelta(hours=9))
-PRICE_RE = re.compile(r"(\d{1,3}(?:,\d{3})+|\d+)\s*원?")
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148"
+}
 TEXT_PRICE_RE = re.compile(r"(\d{1,3}(?:,\d{3})+|\d+)\s*원")
-HEADERS = {"User-Agent": "Mozilla/5.0 (민식당 특가 알리미)"}
+# "9,900" "각1,180" "1,980원" 처럼 가격만 있는 칸
+PRICE_CELL_RE = re.compile(r"^\D{0,4}?(\d{1,3}(?:,\d{3})+|\d{3,7})\s*원?\s*$")
 
 
-def to_price(text):
-    if not text:
-        return None
-    m = PRICE_RE.search(text.replace(" ", ""))
+def price_cell(text):
+    m = PRICE_CELL_RE.match((text or "").strip())
     return int(m.group(1).replace(",", "")) if m else None
 
 
-def scrape_with_selectors(soup, mart):
+def get(url):
+    res = requests.get(url, headers=HEADERS, timeout=30)
+    res.raise_for_status()
+    res.encoding = "utf-8" if "utf" in (res.encoding or "").lower() else (res.apparent_encoding or res.encoding)
+    return res.text
+
+
+def text_of(node, selector):
+    el = node.select_one(selector) if node is not None else None
+    return el.get_text(" ", strip=True) if el else ""
+
+
+# ---------- smart.dhn.kr 스마트전단 ----------
+def dhn_view_url(home_html, home_url):
+    m = re.search(r"/smart/view/[A-Za-z0-9]+\?home=[A-Za-z0-9]+", home_html)
+    return urljoin(home_url, m.group(0)) if m else None
+
+
+def parse_dhn(html, mart_id):
+    soup = BeautifulSoup(html, "html.parser")
+
+    # 코너 이름: 메뉴의 tit_text_info_click(4) → '야채코너', 't' → 첫 코너
+    sections = {}
+    for a in soup.find_all(attrs={"onclick": re.compile(r"tit_text_info_click")}):
+        m = re.search(r"tit_text_info_click\('?(\w+)'?\)", a["onclick"])
+        label = a.get_text(" ", strip=True).replace("arrow_forward", "").strip()
+        if m and label:
+            sections.setdefault("0" if m.group(1) == "t" else m.group(1), label)
+
+    items, seen = [], set()
+    # 첫 코너는 <dl>, 나머지 코너는 <div class="pop_item"> 에 들어 있음
+    for node in soup.select("dl[data-goods-hide], div.pop_item[data-goods-hide]"):
+        if node.get("data-goods-hide") == "Y":
+            continue
+        if node.name == "dl":
+            name = text_of(node, "li.name span[id^=pre_goods_name]")
+            option = text_of(node, "li.name span[id^=pre_goods_option]")
+        else:
+            spans = [s.get_text(" ", strip=True) for s in node.select(".pop_name span")]
+            name = spans[0] if spans else ""
+            option = spans[1] if len(spans) > 1 else ""
+        price = price_cell(text_of(node, ".price2"))
+        original = price_cell(text_of(node, ".price1"))
+        if not name or not price:
+            continue  # "주문받습니다" 처럼 가격이 없는 안내 상품
+        full = f"{name} {option}".strip()
+        step = text_of(node, ".step_no")
+        key = (full, price)
+        if key in seen:
+            continue
+        seen.add(key)
+        items.append({
+            "mart": mart_id,
+            "name": full,
+            "price": price,
+            "original_price": original if original and original > price else None,
+            "section": sections.get(step, ""),
+            "badge": text_of(node, ".pop_option_wrap1 .pop_option"),
+        })
+    title = text_of(soup, ".pre_tit")
+    return items, title
+
+
+def scrape_dhn(mart):
+    home = get(mart["url"])
+    view = dhn_view_url(home, mart["url"])
+    if not view:
+        raise RuntimeError("'행사보기' 링크를 찾지 못함")
+    return parse_dhn(get(view), mart["id"])
+
+
+# ---------- 일반 홈페이지 ----------
+def scrape_selectors(html, mart):
+    soup = BeautifulSoup(html, "html.parser")
     sel = mart["selectors"]
     items = []
     for node in soup.select(sel["item"]):
-        name_el = node.select_one(sel["name"]) if sel.get("name") else None
-        price_el = node.select_one(sel["price"]) if sel.get("price") else None
-        orig_el = node.select_one(sel["original_price"]) if sel.get("original_price") else None
-        name = name_el.get_text(" ", strip=True) if name_el else ""
-        price = to_price(price_el.get_text(" ", strip=True)) if price_el else None
-        orig = to_price(orig_el.get_text(" ", strip=True)) if orig_el else None
+        name = text_of(node, sel["name"]) if sel.get("name") else ""
+        price = price_cell(text_of(node, sel["price"])) if sel.get("price") else None
+        orig = price_cell(text_of(node, sel["original_price"])) if sel.get("original_price") else None
         if name and price:
-            items.append({
-                "mart": mart["id"],
-                "name": name,
-                "price": price,
-                "original_price": orig if orig and orig > price else None,
-            })
+            items.append({"mart": mart["id"], "name": name, "price": price,
+                          "original_price": orig if orig and orig > price else None})
     return items
 
 
-def scrape_text(soup, mart):
-    """선택자가 없을 때: 줄마다 '품목 ... 가격원' 형태를 찾습니다."""
+def scrape_text(html, mart):
+    soup = BeautifulSoup(html, "html.parser")
     items = []
     for line in soup.get_text("\n").splitlines():
         line = line.strip()
@@ -68,37 +136,47 @@ def scrape_text(soup, mart):
         name = re.sub(r"\s+", " ", name).strip()
         if not name or len(name) > 40:
             continue
-        price = min(prices)
-        orig = max(prices)
-        items.append({
-            "mart": mart["id"],
-            "name": name,
-            "price": price,
-            "original_price": orig if orig > price else None,
-        })
+        price, orig = min(prices), max(prices)
+        items.append({"mart": mart["id"], "name": name, "price": price,
+                      "original_price": orig if orig > price else None})
     return items
 
 
-def main():
+def scrape(mart, local_file=None):
+    kind = mart.get("type") or ("selectors" if mart.get("selectors", {}).get("item") else "text")
+    if kind == "dhn_smart":
+        if local_file:
+            return parse_dhn(Path(local_file).read_text(encoding="utf-8"), mart["id"])
+        return scrape_dhn(mart)
+    html = Path(local_file).read_text(encoding="utf-8") if local_file else get(mart["url"])
+    if kind == "selectors":
+        return scrape_selectors(html, mart), ""
+    return scrape_text(html, mart), ""
+
+
+def main(argv):
+    local = {}
+    if "--file" in argv:
+        for spec in argv[argv.index("--file") + 1:]:
+            mid, _, path = spec.partition("=")
+            local[mid] = path
+
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
-    marts = [m for m in config.get("marts", []) if m.get("url")]
+    marts = [m for m in config.get("marts", []) if m.get("url") and m.get("type") != "link"]
+    if local:
+        marts = [m for m in marts if m["id"] in local]
     if not marts:
-        print("홈페이지 주소(url)가 설정된 마트가 없어 수집을 건너뜁니다.")
+        print("자동 수집할 마트가 없습니다.")
         return 0
 
-    all_items, failed = [], []
+    all_items, failed, notes = [], [], {}
     for mart in marts:
         try:
-            res = requests.get(mart["url"], headers=HEADERS, timeout=20)
-            res.raise_for_status()
-            res.encoding = res.apparent_encoding or res.encoding
-            soup = BeautifulSoup(res.text, "html.parser")
-            if mart.get("selectors", {}).get("item"):
-                items = scrape_with_selectors(soup, mart)
-            else:
-                items = scrape_text(soup, mart)
+            items, title = scrape(mart, local.get(mart["id"]))
             print(f"{mart['name']}: {len(items)}개")
             all_items.extend(items)
+            if title:
+                notes[mart["id"]] = title
         except Exception as e:  # 한 마트가 실패해도 나머지는 계속
             print(f"{mart['name']} 실패: {e}", file=sys.stderr)
             failed.append(mart["name"])
@@ -109,17 +187,13 @@ def main():
 
     now = datetime.now(KST)
     OUTPUT.write_text(
-        json.dumps(
-            {
-                "date": now.strftime("%Y-%m-%d"),
-                "updated_at": now.isoformat(timespec="seconds"),
-                "failed": failed,
-                "items": all_items,
-            },
-            ensure_ascii=False,
-            indent=2,
-        )
-        + "\n",
+        json.dumps({
+            "date": now.strftime("%Y-%m-%d"),
+            "updated_at": now.isoformat(timespec="seconds"),
+            "failed": failed,
+            "notes": notes,
+            "items": all_items,
+        }, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     print(f"저장 완료: 총 {len(all_items)}개")
@@ -127,4 +201,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))

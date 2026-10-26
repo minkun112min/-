@@ -1,33 +1,36 @@
 {
-  "_설명": "마트 목록입니다. url은 앱의 '특가 페이지 바로가기'와 매일 아침 자동 수집에 쓰입니다. selectors를 채우면 그 위치에서 정확히 읽고, 비워두면 페이지 글자에서 '품목 ○○원' 줄을 찾습니다.",
+  "_설명": "마트 목록입니다. type: dhn_smart(스마트전단 자동 수집) / selectors / text / link(바로가기만). url은 앱의 '특가 페이지 바로가기'에도 쓰입니다.",
   "marts": [
     {
-      "id": "gjs",
-      "name": "마트1 (gjs)",
-      "color": "#e8590c",
-      "url": "https://gjs.pabal.net/main.html",
-      "selectors": { "item": "", "name": "", "price": "", "original_price": "" }
+      "id": "dhn",
+      "name": "홈마트 곤지암",
+      "color": "#2f9e44",
+      "type": "dhn_smart",
+      "url": "http://smart.dhn.kr/smart/shome/ckdd1et5o62v"
     },
     {
-      "id": "dhn",
-      "name": "마트2 (스마트전단)",
-      "color": "#2f9e44",
-      "url": "http://smart.dhn.kr/smart/shome/ckdd1et5o62v",
-      "selectors": { "item": "", "name": "", "price": "", "original_price": "" }
+      "id": "gjs",
+      "name": "마트 (gjs)",
+      "color": "#e8590c",
+      "type": "link",
+      "url": "https://gjs.pabal.net/main.html",
+      "_메모": "해외 서버(GitHub)에서 접속이 막혀 자동 수집 불가"
     },
     {
       "id": "ogq",
-      "name": "마트3 (ogq)",
+      "name": "마트 (ogq)",
       "color": "#1971c2",
+      "type": "link",
       "url": "https://ogq.pabal.net/page/ogq.pabal.net/331268_202610261525.html",
-      "selectors": { "item": "", "name": "", "price": "", "original_price": "" }
+      "_메모": "해외 서버(GitHub)에서 접속이 막혀 자동 수집 불가. 날짜가 들어간 주소라 매일 바뀔 수 있음"
     },
     {
       "id": "ezip",
-      "name": "마트4 (오늘의 특가)",
+      "name": "마트 (오늘의 특가)",
       "color": "#9c36b5",
+      "type": "link",
       "url": "http://l.ezip.kr/v2024/today_product/discount_pro.php?mart_code=AA006462&com_cnt=&testchk=",
-      "selectors": { "item": "", "name": "", "price": "", "original_price": "" }
+      "_메모": "자동 접속 방지(보안 확인 화면)가 있어 자동 수집하지 않음"
     }
   ]
 }
