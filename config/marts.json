@@ -1,0 +1,39 @@
+{
+  "_설명": "마트 목록입니다. type: dhn_smart(스마트전단) / selectors / text(글자에서 '품목 ○○원' 찾기) / link(바로가기만). inbox: true 는 서버 대신 아이패드 단축어가 페이지를 올려 주는 마트입니다. url은 앱의 '특가 페이지 바로가기'에도 쓰입니다.",
+  "marts": [
+    {
+      "id": "dhn",
+      "name": "홈마트 곤지암",
+      "color": "#2f9e44",
+      "type": "dhn_smart",
+      "url": "http://smart.dhn.kr/smart/shome/ckdd1et5o62v"
+    },
+    {
+      "id": "gjs",
+      "name": "광주식자재마트",
+      "color": "#e8590c",
+      "type": "pabal",
+      "inbox": true,
+      "url": "https://gjs.pabal.net",
+      "_메모": "광주 중앙로. 해외 접속 차단 → 아이패드 단축어가 매일 올림. 오늘 행사 페이지 = 도메인 첫 화면"
+    },
+    {
+      "id": "ogq",
+      "name": "엘마트 광주점",
+      "color": "#1971c2",
+      "type": "pabal",
+      "inbox": true,
+      "url": "https://ogq.pabal.net",
+      "_메모": "초월읍. 해외 접속 차단 → 아이패드 단축어가 매일 올림. 오늘 행사 페이지 = 도메인 첫 화면"
+    },
+    {
+      "id": "ezip",
+      "name": "마트 (오늘의 특가)",
+      "color": "#9c36b5",
+      "type": "text",
+      "inbox": true,
+      "url": "http://l.ezip.kr/v2024/today_product/discount_pro.php?mart_code=AA006462&com_cnt=&testchk=",
+      "_메모": "자동 접속 방지 화면이 있음 → 사파리에서 연 뒤 공유 버튼으로 보내기"
+    }
+  ]
+}
