@@ -58,4 +58,6 @@ ipad/loader.js, ipad/collect.js 아이패드 Scriptable 수집 코드 (로더 / 
 raw/                            아이패드가 올린 마지막 원본 (읽기 규칙 점검용)
 scripts/test_parser.js          카톡 인식 테스트 (node scripts/test_parser.js)
 scripts/test_fetch.py           수집기 테스트 (python scripts/test_fetch.py)
+compare.js                      품목별 가격 비교 (같은 재료 묶기, 단위가격)
+scripts/test_compare.js         품목 비교 테스트 (node scripts/test_compare.js)
 ```

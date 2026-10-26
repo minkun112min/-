@@ -204,3 +204,34 @@ textarea { resize: vertical; margin-bottom: 10px; }
 .badge { font-size: 11px; color: #fff; background: var(--brand); border-radius: 6px; padding: 0 5px; font-weight: 700; }
 .mart-head small { text-align: left; }
 .stale { color: var(--brand); }
+
+/* 보기 전환 */
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: var(--line); padding: 4px; border-radius: 12px; margin-bottom: 10px; }
+.seg button { border: 0; background: transparent; padding: 9px 6px; border-radius: 9px; font-weight: 700; color: var(--muted); cursor: pointer; }
+.seg button.on { background: var(--card); color: var(--text); box-shadow: var(--shadow); }
+
+/* 품목별 비교 */
+.cmp-status { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted); margin: 12px 2px 0; }
+.cmp-status .st { display: inline-flex; align-items: center; gap: 4px; }
+.cmp-note { font-size: 13px; color: var(--muted); margin: 6px 2px 4px; }
+.cmp { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); margin-top: 12px; overflow: hidden; }
+.cmp-head { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.cmp-head .ico { font-size: 22px; }
+.cmp-head h3 { margin: 0; font-size: 18px; }
+.cmp-head small { margin-left: auto; color: var(--muted); font-size: 13px; }
+.cmp-marts { color: var(--brand); }
+.cmp-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-top: 1px solid var(--line); }
+.cmp-row:first-of-type { border-top: 0; }
+.cmp-row.best { background: var(--brand-soft); }
+.cmp-row .rank { flex: 0 0 34px; font-size: 13px; font-weight: 800; color: var(--muted); text-align: center; }
+.cmp-row.best .rank { color: var(--brand); }
+.cmp-row .info { flex: 1; min-width: 0; }
+.cmp-mart { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; }
+.cmp-name { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.cmp-price { flex: 0 0 auto; text-align: right; }
+.cmp-price b { display: block; font-size: 17px; }
+.cmp-row.best .cmp-price b { color: var(--brand); }
+.cmp-price small { font-size: 11px; color: var(--muted); white-space: nowrap; }
+.cmp-row .add { min-width: 58px; padding: 8px 10px; }
+.cmp-more { display: block; width: 100%; border: 0; border-top: 1px solid var(--line); background: transparent; padding: 10px; color: var(--muted); font-weight: 700; cursor: pointer; }
+@media (max-width: 420px) { .cmp-row .rank { flex-basis: 26px; } .cmp-row { gap: 8px; } }
