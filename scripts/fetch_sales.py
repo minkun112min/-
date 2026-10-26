@@ -206,6 +206,8 @@ def scrape_text(html, mart):
 def parse_html(mart, html):
     """이미 받은 HTML(아이패드가 올린 파일 등)에서 특가를 읽습니다."""
     kind = mart.get("type") or "text"
+    if kind == "unknown":  # 아직 읽기 규칙이 없는 마트: 원본만 raw/ 에 남겨 규칙을 만들 때 씀
+        return [], ""
     if kind == "dhn_smart":
         return parse_dhn(html, mart["id"])
     if kind == "pabal":

@@ -30,10 +30,10 @@
       "id": "ezip",
       "name": "마트 (오늘의 특가)",
       "color": "#9c36b5",
-      "type": "text",
+      "type": "unknown",
       "inbox": true,
       "url": "http://l.ezip.kr/v2024/today_product/discount_pro.php?mart_code=AA006462&com_cnt=&testchk=",
-      "_메모": "자동 접속 방지 화면이 있음 → 사파리에서 연 뒤 공유 버튼으로 보내기"
+      "_메모": "자동 접속 방지 화면이 있음 → 사파리에서 연 뒤 공유 버튼(단축어 특가 보내기)으로 보냄. 첫 원본(raw/ezip.html)을 보고 읽기 규칙을 만들 예정"
     }
   ]
 }

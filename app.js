@@ -42,6 +42,8 @@
     query: '',
     viewMode: LS.get('viewMode', 'item'), // item: 품목별 비교, mart: 마트별
     expanded: new Set(),
+    favs: new Set(LS.get('favs', [])), // 즐겨찾기 재료 (이 기기에 저장)
+    favOnly: LS.get('favOnly', false),
     preview: [],
   };
 
@@ -217,6 +219,37 @@
   // 품목별 비교: 같은 재료를 마트 상관없이 묶고 싼 순서로
   const CAT_ORDER = ['채소', '육류', '수산', '계란·두부', '양념·곡물', '과일', '기타'];
   const ROWS_SHOWN = 5;
+  const FAV_SUGGEST = ['계란', '대파', '양파', '두부', '마늘', '무', '배추', '애호박', '콩나물', '감자', '어묵', '고등어'];
+
+  function cmpCard(g) {
+    const open = state.expanded.has(g.key);
+    const rows = open ? g.rows : g.rows.slice(0, ROWS_SHOWN);
+    const compare = g.rows.length > 1;
+    const fav = state.favs.has(g.key);
+    return `<div class="cmp ${fav ? 'fav' : ''}">
+      <div class="cmp-head">
+        <span class="ico">${g.rows[0].item.icon || '🛒'}</span>
+        <h3>${esc(g.key)}</h3>
+        <button class="star ${fav ? 'on' : ''}" data-fav="${esc(g.key)}" aria-label="${fav ? '즐겨찾기 빼기' : '즐겨찾기 추가'}">${fav ? '★' : '☆'}</button>
+        <small>${g.marts > 1 ? `<b class="cmp-marts">${g.marts}곳 비교</b> · ` : ''}${g.byUnit ? '단위가격 기준' : `최저 ${won(g.min)}`}</small>
+      </div>
+      ${rows.map((r, i) => {
+        const it = r.item, m = martById(it.mart), inCart = !!state.cart[keyOf(it)];
+        const best = compare && i === 0;
+        return `<div class="cmp-row ${best ? 'best' : ''}">
+          <span class="rank">${best ? '최저' : compare ? i + 1 : ''}</span>
+          <div class="info">
+            <div class="cmp-mart"><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)}</div>
+            <div class="cmp-name">${esc(it.name)}${it.badge ? ` <span class="badge">${esc(it.badge)}</span>` : ''}</div>
+          </div>
+          <div class="cmp-price"><b>${won(it.price)}</b>${r.up ? `<small>${Compare.unitLabel(r.up)}</small>` : ''}</div>
+          <button class="add ${inCart ? 'in' : ''}" data-add="${esc(keyOf(it))}">${inCart ? '✓ 담김' : '담기'}</button>
+        </div>`;
+      }).join('')}
+      ${g.rows.length > ROWS_SHOWN ? `<button class="cmp-more" data-more="${esc(g.key)}">${open ? '접기 ▲' : `${g.rows.length - ROWS_SHOWN}개 더 보기 ▼`}</button>` : ''}
+    </div>`;
+  }
+
   function renderByItem(items, el) {
     const groups = Compare.groupByIngredient(items);
     const catIdx = (g) => { const i = CAT_ORDER.indexOf(g.rows[0].item.category); return i < 0 ? 99 : i; };
@@ -229,34 +262,33 @@
       return `<span class="st"><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)} ${updatedLabel(id) || ''}</span>`;
     }).join('');
 
+    // ⭐ 즐겨찾기: 즐겨찾기 순서대로 맨 위에
+    const favList = [...state.favs];
+    const favGroups = favList.map((k) => groups.find((g) => g.key === k)).filter(Boolean);
+    const favMissing = favList.filter((k) => !groups.some((g) => g.key === k));
+    const others = groups.filter((g) => !state.favs.has(g.key));
+
+    let favHtml;
+    if (!favList.length) {
+      favHtml = `<div class="fav-box">
+        <div class="fav-title">⭐ 즐겨찾기 재료</div>
+        <p class="help">매일 사는 재료를 눌러 두면 그 재료의 마트별 최저가가 항상 맨 위에 나와요. 카드의 ☆ 를 눌러도 돼요.</p>
+        <div class="fav-suggest">${FAV_SUGGEST.map((k) => `<button class="chip" data-fav="${esc(k)}">+ ${esc(k)}</button>`).join('')}</div>
+      </div>`;
+    } else {
+      favHtml = `<div class="fav-title fav-title-row">⭐ 즐겨찾기 재료 <small>${favGroups.length}/${favList.length}개 오늘 특가 있음</small></div>` +
+        favGroups.map(cmpCard).join('') +
+        (favMissing.length ? `<div class="fav-missing">오늘은 특가 없음: ${favMissing.map((k) => `<button class="chip" data-fav="${esc(k)}" title="즐겨찾기 빼기">${esc(k)} ✕</button>`).join('')}</div>` : '') +
+        (FAV_SUGGEST.some((k) => !state.favs.has(k))
+          ? `<div class="fav-missing fav-suggest">추가: ${FAV_SUGGEST.filter((k) => !state.favs.has(k)).map((k) => `<button class="chip" data-fav="${esc(k)}">+ ${esc(k)}</button>`).join('')}</div>`
+          : '');
+    }
+
     el.innerHTML = `<div class="cmp-status">${status}</div>
-      <p class="cmp-note">같은 재료끼리 묶어 <b>싼 순서</b>로 보여줘요. 용량 단위가 같으면 <b>1단당·100g당</b> 가격으로 비교해요.</p>` +
-      groups.map((g) => {
-        const open = state.expanded.has(g.key);
-        const rows = open ? g.rows : g.rows.slice(0, ROWS_SHOWN);
-        const compare = g.rows.length > 1;
-        return `<div class="cmp">
-          <div class="cmp-head">
-            <span class="ico">${g.rows[0].item.icon || '🛒'}</span>
-            <h3>${esc(g.key)}</h3>
-            <small>${g.marts > 1 ? `<b class="cmp-marts">${g.marts}곳 비교</b> · ` : ''}${g.byUnit ? '단위가격 기준' : `최저 ${won(g.min)}`}</small>
-          </div>
-          ${rows.map((r, i) => {
-            const it = r.item, m = martById(it.mart), inCart = !!state.cart[keyOf(it)];
-            const best = compare && i === 0;
-            return `<div class="cmp-row ${best ? 'best' : ''}">
-              <span class="rank">${best ? '최저' : compare ? i + 1 : ''}</span>
-              <div class="info">
-                <div class="cmp-mart"><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)}</div>
-                <div class="cmp-name">${esc(it.name)}${it.badge ? ` <span class="badge">${esc(it.badge)}</span>` : ''}</div>
-              </div>
-              <div class="cmp-price"><b>${won(it.price)}</b>${r.up ? `<small>${Compare.unitLabel(r.up)}</small>` : ''}</div>
-              <button class="add ${inCart ? 'in' : ''}" data-add="${esc(keyOf(it))}">${inCart ? '✓ 담김' : '담기'}</button>
-            </div>`;
-          }).join('')}
-          ${g.rows.length > ROWS_SHOWN ? `<button class="cmp-more" data-more="${esc(g.key)}">${open ? '접기 ▲' : `${g.rows.length - ROWS_SHOWN}개 더 보기 ▼`}</button>` : ''}
-        </div>`;
-      }).join('');
+      <p class="cmp-note">같은 재료끼리 묶어 <b>싼 순서</b>로 보여줘요. 용량 단위가 같으면 <b>1단당·100g당</b> 가격으로 비교해요.</p>
+      <button class="chip fav-only ${state.favOnly ? 'on' : ''}" data-favonly="1">⭐ 즐겨찾기만 보기</button>` +
+      favHtml +
+      (state.favOnly ? '' : (favList.length ? '<div class="fav-title">전체 재료</div>' : '') + others.map(cmpCard).join(''));
   }
 
   function groupByMart(items) {
@@ -394,6 +426,12 @@
 
       if (d.go) { go(d.go); return; }
       if (d.viewmode) { state.viewMode = d.viewmode; LS.set('viewMode', d.viewmode); renderSales(); return; }
+      if (d.fav) {
+        if (state.favs.has(d.fav)) { state.favs.delete(d.fav); toast(`'${d.fav}' 즐겨찾기에서 뺐어요`); }
+        else { state.favs.add(d.fav); toast(`'${d.fav}' 즐겨찾기에 넣었어요`); }
+        LS.set('favs', [...state.favs]); renderSales(); return;
+      }
+      if (d.favonly) { state.favOnly = !state.favOnly; LS.set('favOnly', state.favOnly); renderSales(); return; }
       if (d.more) { state.expanded.has(d.more) ? state.expanded.delete(d.more) : state.expanded.add(d.more); renderSales(); return; }
       if (d.cat) { state.filterCat = d.cat; renderChips(); renderSales(); return; }
       if (d.mart) { state.filterMart = d.mart; renderChips(); renderSales(); return; }
