@@ -248,3 +248,10 @@ textarea { resize: vertical; margin-bottom: 10px; }
 .fav-box .fav-title { margin: 0 0 4px; }
 .fav-suggest { display: flex; flex-wrap: wrap; gap: 6px; }
 .fav-missing { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+/* 상단 마트별 반영 상태 */
+.mart-status { margin: 4px 0 0; font-size: 13px; display: flex; flex-wrap: wrap; gap: 2px 6px; opacity: .95; }
+.mart-status .ms { white-space: nowrap; }
+.mart-status .ms b { font-weight: 700; color: #ffe08a; }
+.mart-status .ms-sep { opacity: .6; }
+.cart-pill { white-space: nowrap; flex: 0 0 auto; align-self: flex-start; }
