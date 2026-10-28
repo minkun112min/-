@@ -90,17 +90,13 @@
       state.martUpdated = data.mart_updated || {};
     } catch (e) { /* 자동 수집 데이터 없음 */ }
 
-    const d = new Date();
-    const days = ['일', '월', '화', '수', '목', '금', '토'];
-    document.getElementById('today-label').textContent =
-      `${d.getMonth() + 1}월 ${d.getDate()}일 (${days[d.getDay()]}) 오늘의 특가`;
-
     bindEvents();
     renderAll();
   }
 
   // ---------- 화면 그리기 ----------
   function renderAll() {
+    renderHeaderDate();
     renderStats();
     renderChips();
     renderSales();
@@ -160,6 +156,33 @@
       ? '<p class="links-title">마트 특가 페이지 바로가기</p><div class="links">' + withUrl.map((m) =>
           `<a class="link" href="${esc(m.url)}" target="_blank" rel="noopener"><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)} ↗</a>`).join('') + '</div>'
       : '';
+  }
+
+  // 상단: 가장 최근에 반영된 날짜 + 마트별 ✅ / (마지막 반영 날짜)
+  function localDay(iso) {
+    const d = new Date(iso);
+    if (isNaN(d)) return null;
+    const p = (n) => String(n).padStart(2, '0');
+    return { key: `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`, date: d };
+  }
+  function renderHeaderDate() {
+    const days = ['일', '월', '화', '수', '목', '금', '토'];
+    const fmt = (d) => `${d.getMonth() + 1}월 ${d.getDate()}일 (${days[d.getDay()]})`;
+    const marts = state.marts.filter((m) => state.martUpdated[m.id] && localDay(state.martUpdated[m.id]));
+    const label = document.getElementById('today-label');
+    const status = document.getElementById('mart-status');
+    if (!marts.length) { // 자동 수집 자료가 없을 때만 기기 날짜
+      label.textContent = `${fmt(new Date())} 특가`;
+      status.textContent = '';
+      return;
+    }
+    const daysOf = marts.map((m) => localDay(state.martUpdated[m.id]));
+    const latest = daysOf.reduce((a, b) => (b.key > a.key ? b : a));
+    label.textContent = `${fmt(latest.date)} 특가`;
+    status.innerHTML = marts.map((m, i) => {
+      const d = daysOf[i];
+      return `<span class="ms">${esc(m.name)} ${d.key === latest.key ? '✅' : `<b>(${d.date.getMonth() + 1}/${d.date.getDate()})</b>`}</span>`;
+    }).join('<span class="ms-sep">·</span>');
   }
 
   // "오늘 07:03 수집" / "10/25 수집(지난 자료)"
@@ -256,12 +279,6 @@
     // 여러 마트에서 파는 재료(비교할 거리가 있는 것)를 먼저
     groups.sort((a, b) => (b.marts - a.marts) || (catIdx(a) - catIdx(b)) || a.key.localeCompare(b.key, 'ko'));
 
-    const shownMarts = [...new Set(items.map((it) => it.mart))];
-    const status = shownMarts.map((id) => {
-      const m = martById(id);
-      return `<span class="st"><span class="dot" style="background:${esc(m.color)}"></span>${esc(m.name)} ${updatedLabel(id) || ''}</span>`;
-    }).join('');
-
     // ⭐ 즐겨찾기: 즐겨찾기 순서대로 맨 위에
     const favList = [...state.favs];
     const favGroups = favList.map((k) => groups.find((g) => g.key === k)).filter(Boolean);
@@ -284,8 +301,7 @@
           : '');
     }
 
-    el.innerHTML = `<div class="cmp-status">${status}</div>
-      <p class="cmp-note">같은 재료끼리 묶어 <b>싼 순서</b>로 보여줘요. 용량 단위가 같으면 <b>1단당·100g당</b> 가격으로 비교해요.</p>
+    el.innerHTML = `<p class="cmp-note">같은 재료끼리 묶어 <b>싼 순서</b>로 보여줘요. 용량 단위가 같으면 <b>1단당·100g당</b> 가격으로 비교해요.</p>
       <button class="chip fav-only ${state.favOnly ? 'on' : ''}" data-favonly="1">⭐ 즐겨찾기만 보기</button>` +
       favHtml +
       (state.favOnly ? '' : (favList.length ? '<div class="fav-title">전체 재료</div>' : '') + others.map(cmpCard).join(''));
