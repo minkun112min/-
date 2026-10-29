@@ -1,45 +1,725 @@
 {
   "date": "2026-10-29",
-  "updated_at": "2026-10-29T10:43:12+09:00",
+  "updated_at": "2026-10-29T11:00:16+09:00",
   "mart_updated": {
-    "gjs": "2026-10-28T11:00:15+09:00",
-    "ogq": "2026-10-28T11:00:15+09:00",
-    "dhn": "2026-10-29T10:43:12+09:00"
+    "dhn": "2026-10-29T10:43:12+09:00",
+    "gjs": "2026-10-29T11:00:16+09:00",
+    "ogq": "2026-10-29T11:00:16+09:00"
   },
   "failed": [],
   "notes": {
-    "gjs": "10월 28일 수요일",
-    "dhn": "#홈마트1등의자신감#10월26~27일(월~화요일)"
+    "dhn": "#홈마트1등의자신감#10월26~27일(월~화요일)",
+    "gjs": "10월 29일 목요일"
   },
   "items": [
     {
-      "mart": "gjs",
-      "name": "창원 왕단감 왕특/8개",
+      "mart": "dhn",
+      "name": "알타리 4단",
       "price": 9900,
       "original_price": null,
-      "section": "",
-      "badge": ""
+      "section": "할인&대표상품",
+      "badge": "대박초특가"
     },
     {
-      "mart": "gjs",
-      "name": "안동부사 특10개",
+      "mart": "dhn",
+      "name": "배추 1망",
       "price": 9900,
       "original_price": null,
-      "section": "",
-      "badge": ""
+      "section": "할인&대표상품",
+      "badge": "서두르세요"
     },
     {
-      "mart": "gjs",
-      "name": "하우스감귤 3Kg/1상자",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "다발무 1단",
+      "mart": "dhn",
+      "name": "특란 30구",
       "price": 6980,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "아이스크림 바류 10개",
+      "price": 4980,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "비비고사골곰탕 500g",
+      "price": 990,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": "한정수량"
+    },
+    {
+      "mart": "dhn",
+      "name": "오뚜기3분쇠고기카레/짜장 200g",
+      "price": 1180,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "사조 마일드참치 200g",
+      "price": 2850,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "농심안성탕면 멀티",
+      "price": 3280,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "해찬들사계절쌈장 500g",
+      "price": 2450,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "오뚜기 소면 900g",
+      "price": 2980,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "해표 식용유 1.8L",
+      "price": 4980,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "오뚜기 옛날참기름 320ml",
+      "price": 4980,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "샘표 진간장S 1.7L",
+      "price": 5980,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "유동 자연산골뱅이 400g",
+      "price": 9900,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "CJ햇반 200g*10",
+      "price": 12800,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "맥심 모카골드 250T",
+      "price": 39800,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "메뚜기쌀 20kg",
+      "price": 57800,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "피죤 2500ml",
+      "price": 3480,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "부자되는집 내추럴소프트 3겹30롤",
+      "price": 8950,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "대박김치 1박스",
+      "price": 17900,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "백김치 1박스",
+      "price": 19900,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "제주감귤 5kg/박스",
+      "price": 12800,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "샤인머스켓 4kg/박스",
+      "price": 14800,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "굴비 1팩",
+      "price": 9900,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "꽈리고추 1박스/상",
+      "price": 14800,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "한우꼬리반벌",
+      "price": 40000,
+      "original_price": null,
+      "section": "할인&대표상품",
+      "badge": "소진시종료!!"
+    },
+    {
+      "mart": "dhn",
+      "name": "청경채 1박스",
+      "price": 6980,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "얼갈이 1박스",
+      "price": 3980,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "무 1박스(9~10수)",
+      "price": 19800,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "국산양파 15kg",
+      "price": 19800,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "열무 1박스",
+      "price": 3980,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "인큐애호박 1박스/상",
+      "price": 9900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "근대 1박스",
+      "price": 14000,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "양배추 1망",
+      "price": 13900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "대파 10단",
+      "price": 15900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "가지 1박스/상",
+      "price": 12000,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "세척당근 1박스",
+      "price": 8900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "물파래 1판",
+      "price": 5980,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "꽃상추 1박스",
+      "price": 17800,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "찹찹이깻잎 1박스",
+      "price": 12800,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "애호박 2개/1팩",
+      "price": 1590,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "백오이 1박스/상",
+      "price": 17900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "깐쪽파 1단",
+      "price": 4980,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "왕쪽파 1단",
+      "price": 4980,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "백오이 5개/1봉",
+      "price": 2900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "가지 5개/1봉",
+      "price": 2980,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "사과 1봉",
+      "price": 9900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "시나노사과 6개",
+      "price": 12000,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "감홍사과 4개",
+      "price": 9900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "대봉감 10개",
+      "price": 7900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "연시 5개",
+      "price": 4980,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "제주감귤 1봉",
+      "price": 5980,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "샤인머스켓 2KG/1박스",
+      "price": 9900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "머루포도 1박스",
+      "price": 14900,
+      "original_price": null,
+      "section": "야채코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "순/연두부 2개",
+      "price": 990,
+      "original_price": null,
+      "section": "특가5일장",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "꽃느타리버섯 2kg/박스",
+      "price": 5980,
+      "original_price": null,
+      "section": "특가5일장",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "아욱 1박스",
+      "price": 9900,
+      "original_price": null,
+      "section": "특가5일장",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "꽈리고추 1박스",
+      "price": 14800,
+      "original_price": null,
+      "section": "특가5일장",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "알배기쌈배추 1박스",
+      "price": 19800,
+      "original_price": null,
+      "section": "특가5일장",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "감자(왕왕) 20kg/박스",
+      "price": 39800,
+      "original_price": null,
+      "section": "특가5일장",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "모듬해물 1봉",
+      "price": 7900,
+      "original_price": null,
+      "section": "특가5일장",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "간장게장 1팩",
+      "price": 10000,
+      "original_price": null,
+      "section": "특가5일장",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "오렌지 5개",
+      "price": 6900,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "신고배 4개",
+      "price": 6900,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "단감 10개",
+      "price": 9900,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "부추 1단",
+      "price": 1480,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "파프리카 2입/1봉",
+      "price": 1480,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "양파(중) 1망",
+      "price": 2500,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "깐쪽파(대) 1단",
+      "price": 4980,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "표고버섯 1kg내외/1봉",
+      "price": 8900,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "한우 생목살 1근/600g",
+      "price": 13800,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "한돈 생오겹살 1근/600g",
+      "price": 15600,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "한돈 생삼겹살 1근/600g",
+      "price": 16700,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "삼치(대) 1마리",
+      "price": 9900,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "노르웨이 자반 1손",
+      "price": 10900,
+      "original_price": null,
+      "section": "월화알뜰장터",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "한우 불고기 1근/600g",
+      "price": 24000,
+      "original_price": null,
+      "section": "정육",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "호주산 소불고기 1근/600g",
+      "price": 10800,
+      "original_price": null,
+      "section": "정육",
+      "badge": "소진시까지!!"
+    },
+    {
+      "mart": "dhn",
+      "name": "한우 잡뼈 1kg",
+      "price": 4000,
+      "original_price": null,
+      "section": "정육",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "한우 사골 2족",
+      "price": 20000,
+      "original_price": null,
+      "section": "정육",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "절단코다리 1박스",
+      "price": 55000,
+      "original_price": null,
+      "section": "수산코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "생선까스 100장/1박스",
+      "price": 27000,
+      "original_price": null,
+      "section": "수산코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "참조기 40미/50미",
+      "price": 40000,
+      "original_price": null,
+      "section": "수산코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "절단꽃게 1박스",
+      "price": 32000,
+      "original_price": null,
+      "section": "수산코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "두절가자미 100/150",
+      "price": 38000,
+      "original_price": null,
+      "section": "수산코너",
+      "badge": ""
+    },
+    {
+      "mart": "dhn",
+      "name": "두절가자미 150/200",
+      "price": 35000,
+      "original_price": null,
+      "section": "수산코너",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "청도연시 5Kg/1상자",
+      "price": 10000,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "하우스감귤 5Kg/1상자",
+      "price": 10000,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "창원단감 특/10개",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "햇무 1개",
+      "price": 1480,
       "original_price": null,
       "section": "",
       "badge": ""
@@ -54,8 +734,8 @@
     },
     {
       "mart": "gjs",
-      "name": "청갓 1단",
-      "price": 2480,
+      "name": "국산 다진마늘 2kg/1봉",
+      "price": 12800,
       "original_price": null,
       "section": "",
       "badge": ""
@@ -63,7 +743,7 @@
     {
       "mart": "gjs",
       "name": "황제 소갈비살 100g단",
-      "price": 3980,
+      "price": 4980,
       "original_price": null,
       "section": "",
       "badge": ""
@@ -78,31 +758,23 @@
     },
     {
       "mart": "gjs",
-      "name": "토종 한우 꼬리반골 1벌",
-      "price": 55000,
+      "name": "다향 백숙용 토종닭 1마리",
+      "price": 10800,
       "original_price": null,
       "section": "",
       "badge": ""
     },
     {
       "mart": "gjs",
-      "name": "오징어(특대) 2마리",
-      "price": 12900,
+      "name": "생물 먹갈치 3마리",
+      "price": 9900,
       "original_price": null,
       "section": "",
       "badge": ""
     },
     {
       "mart": "gjs",
-      "name": "황태구이 3마리",
-      "price": 12900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "햇감용 생굴 400g/1근",
+      "name": "횟간용 생굴 400g/1근",
       "price": 8000,
       "original_price": null,
       "section": "",
@@ -110,27 +782,35 @@
     },
     {
       "mart": "gjs",
-      "name": "활어초밥 12P/1팩",
+      "name": "자갈치 꼼장어 1~2인분/1팩",
       "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "방어회 1팩",
-      "price": 17900,
       "original_price": null,
       "section": "",
       "badge": ""
     },
     {
       "mart": "gjs",
-      "name": "과메기 1팩",
-      "price": 9900,
+      "name": "모듬회 1접시",
+      "price": 25900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "방어회 1접시",
+      "price": 25900,
       "original_price": null,
       "section": "",
       "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "전어회 1접시",
+      "price": 17900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
     },
     {
       "mart": "gjs",
@@ -255,14 +935,6 @@
     {
       "mart": "gjs",
       "name": "왕바나나 1송이",
-      "price": 3900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "사과대추 1팩",
       "price": 4900,
       "original_price": null,
       "section": "",
@@ -279,7 +951,7 @@
     {
       "mart": "gjs",
       "name": "샤인머스켓 2Kg/1상자",
-      "price": 9900,
+      "price": 8900,
       "original_price": null,
       "section": "",
       "badge": ""
@@ -318,7 +990,7 @@
     },
     {
       "mart": "gjs",
-      "name": "안동부사 특/10개",
+      "name": "안동부사 특/8개",
       "price": 9900,
       "original_price": null,
       "section": "",
@@ -326,7 +998,7 @@
     },
     {
       "mart": "gjs",
-      "name": "시나노골드 사과 특/10개",
+      "name": "시나노골드 사과 특/8개",
       "price": 9900,
       "original_price": null,
       "section": "",
@@ -350,8 +1022,8 @@
     },
     {
       "mart": "gjs",
-      "name": "대봉감 4Kg/1상자",
-      "price": 14900,
+      "name": "하우스감귤 3Kg/1상자",
+      "price": 9900,
       "original_price": null,
       "section": "",
       "badge": ""
@@ -359,6 +1031,14 @@
     {
       "mart": "gjs",
       "name": "샤인머스켓 4Kg/1상자",
+      "price": 19900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "대봉감 4Kg/1상자",
       "price": 19900,
       "original_price": null,
       "section": "",
@@ -374,6 +1054,14 @@
     },
     {
       "mart": "gjs",
+      "name": "구례대봉 18~20Kg/1상자",
+      "price": 59900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
       "name": "오미자&천연당 10Kg/1통",
       "price": 119000,
       "original_price": null,
@@ -382,8 +1070,40 @@
     },
     {
       "mart": "gjs",
-      "name": "하늘내린두부 3kg/1팩",
+      "name": "무 1개",
+      "price": 1480,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "자연두부 3kg/1팩",
       "price": 3980,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "흙생강 100g",
+      "price": 590,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "청갓 1단",
+      "price": 2480,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "홍갓 1단",
+      "price": 2980,
       "original_price": null,
       "section": "",
       "badge": ""
@@ -406,31 +1126,23 @@
     },
     {
       "mart": "gjs",
-      "name": "흙생강 100g",
-      "price": 650,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "홍갓 1단",
-      "price": 2980,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
       "name": "알타리 1단",
-      "price": 2980,
+      "price": 3480,
       "original_price": null,
       "section": "",
       "badge": ""
     },
     {
       "mart": "gjs",
-      "name": "국산 다진마늘 2kg/1봉",
+      "name": "다발무 1단",
+      "price": 6980,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "무 1박스",
       "price": 12800,
       "original_price": null,
       "section": "",
@@ -439,7 +1151,7 @@
     {
       "mart": "gjs",
       "name": "왕대파 10단/1망",
-      "price": 17800,
+      "price": 19800,
       "original_price": null,
       "section": "",
       "badge": ""
@@ -454,6 +1166,14 @@
     },
     {
       "mart": "gjs",
+      "name": "냉동 대패삼겹살 600g/1근",
+      "price": 8900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
       "name": "토종한우 꼬리반골 1벌",
       "price": 55000,
       "original_price": null,
@@ -462,7 +1182,7 @@
     },
     {
       "mart": "gjs",
-      "name": "대패 우삼겹살 600g/1근",
+      "name": "추억의 대패 우삼겹살 600g/1근",
       "price": 9900,
       "original_price": null,
       "section": "",
@@ -471,14 +1191,6 @@
     {
       "mart": "gjs",
       "name": "황제 소갈비살 100g",
-      "price": 3980,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "제육용 목전지 600g/1근",
       "price": 4980,
       "original_price": null,
       "section": "",
@@ -494,15 +1206,23 @@
     },
     {
       "mart": "gjs",
-      "name": "양념간장주물럭 1.3kg/8근",
-      "price": 12900,
+      "name": "양념 소불고기 1.2kg/2근",
+      "price": 14900,
       "original_price": null,
       "section": "",
       "badge": ""
     },
     {
       "mart": "gjs",
-      "name": "생물참조기(대) 8마리",
+      "name": "생물먹갈치 3마리",
+      "price": 9900,
+      "original_price": null,
+      "section": "",
+      "badge": ""
+    },
+    {
+      "mart": "gjs",
+      "name": "황태구이 3마리",
       "price": 12900,
       "original_price": null,
       "section": "",
@@ -518,24 +1238,8 @@
     },
     {
       "mart": "gjs",
-      "name": "꼼장어 1~2인분/1팩",
+      "name": "생물낙지 3마리",
       "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "명태코다리(대) 4마리",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": ""
-    },
-    {
-      "mart": "gjs",
-      "name": "가을 활꽃게 1kg",
-      "price": 12900,
       "original_price": null,
       "section": "",
       "badge": ""
@@ -566,32 +1270,16 @@
     },
     {
       "mart": "gjs",
-      "name": "방어회 1접시",
+      "name": "연어회 1접시",
+      "price": 22900,
+      "original_price": null,
+      "section": "",
+      "badge": "방문구매전용"
+    },
+    {
+      "mart": "gjs",
+      "name": "전어회 1팩",
       "price": 17900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "병어회 1접시",
-      "price": 15900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "연어롤 1팩",
-      "price": 9900,
-      "original_price": null,
-      "section": "",
-      "badge": "방문구매전용"
-    },
-    {
-      "mart": "gjs",
-      "name": "매생이 갈비탕 1팩",
-      "price": 9900,
       "original_price": null,
       "section": "",
       "badge": "방문구매전용"
@@ -1463,7 +2151,7 @@
     {
       "mart": "ogq",
       "name": "한우1+꽃등심 100g",
-      "price": 13800,
+      "price": 11800,
       "original_price": null,
       "section": "상상초월 대표상품",
       "badge": ""
@@ -1614,90 +2302,58 @@
     },
     {
       "mart": "ogq",
-      "name": "꽃느타리버섯 2Kg/1박스",
-      "price": 6900,
+      "name": "청경채 4Kg/1박스",
+      "price": 4900,
       "original_price": null,
-      "section": "야채식자재 3일장(10/26~28)월/화/수",
+      "section": "야채식자재 4일장(10/29~11/1)목/금/토/일",
       "badge": ""
     },
     {
       "mart": "ogq",
-      "name": "배추 3통/1망",
+      "name": "열무 4Kg/1박스",
+      "price": 3900,
+      "original_price": null,
+      "section": "야채식자재 4일장(10/29~11/1)목/금/토/일",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "얼갈이 4Kg/1박스",
+      "price": 3900,
+      "original_price": null,
+      "section": "야채식자재 4일장(10/29~11/1)목/금/토/일",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "애호박(상) 1박스",
       "price": 9900,
       "original_price": null,
-      "section": "야채식자재 3일장(10/26~28)월/화/수",
+      "section": "야채식자재 4일장(10/29~11/1)목/금/토/일",
       "badge": ""
     },
     {
       "mart": "ogq",
-      "name": "새송이버섯(특) 2Kg/1박스",
-      "price": 7900,
+      "name": "적상추 4Kg/1박스",
+      "price": 12900,
       "original_price": null,
-      "section": "야채식자재 3일장(10/26~28)월/화/수",
+      "section": "야채식자재 4일장(10/29~11/1)목/금/토/일",
       "badge": ""
     },
     {
       "mart": "ogq",
-      "name": "깐마늘(대) 1.8Kg",
-      "price": 15900,
+      "name": "청상추 4Kg/1박스",
+      "price": 12900,
       "original_price": null,
-      "section": "야채식자재 3일장(10/26~28)월/화/수",
+      "section": "야채식자재 4일장(10/29~11/1)목/금/토/일",
       "badge": ""
     },
     {
       "mart": "ogq",
-      "name": "반팩두부 3Kg/1팩",
-      "price": 3980,
+      "name": "숙주나물 1박스",
+      "price": 4500,
       "original_price": null,
-      "section": "야채식자재 3일장(10/26~28)월/화/수",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "수입마늘쫑[대] 1단",
-      "price": 1980,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "봄동 100g",
-      "price": 198,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "백오이[특] 5개/1봉",
-      "price": 1980,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "시금치[특] 1단",
-      "price": 1580,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "알타리[특] 4단",
-      "price": 9900,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "부추 1단",
-      "price": 1590,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "야채식자재 4일장(10/29~11/1)목/금/토/일",
       "badge": ""
     },
     {
@@ -1705,7 +2361,7 @@
       "name": "황토무(특) 1개",
       "price": 1980,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1713,7 +2369,39 @@
       "name": "인큐애호박 3입/1봉",
       "price": 2480,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "흙쪽파(큰단) 1단",
+      "price": 2980,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "청양고추(산지가격인상으로가격인상) 1Kg/1봉",
+      "price": 3980,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "표고버섯(국산) 500g/1팩",
+      "price": 3980,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "부추 1단",
+      "price": 1590,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1721,7 +2409,7 @@
       "name": "청갓 1단",
       "price": 2980,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1729,7 +2417,7 @@
       "name": "홍갓 1단",
       "price": 2980,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1737,87 +2425,7 @@
       "name": "돌산갓 1단",
       "price": 3980,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "흙쪽파(큰단) 1단",
-      "price": 3980,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "청양고추 1Kg/1봉",
-      "price": 3980,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "표고버섯(국산) 500g/1팩",
-      "price": 4980,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "대파 1단",
-      "price": 1980,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "표고버섯(국산) 1Kg",
-      "price": 9900,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "호박고구마 약1kg/1봉",
-      "price": 2580,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "꽈리고추 약400g/1봉",
-      "price": 2980,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "세척당근(수입) 3개/1팩",
-      "price": 1980,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "열무 1단",
-      "price": 2980,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "얼갈이 1단",
-      "price": 1980,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1825,7 +2433,55 @@
       "name": "알타리 4단",
       "price": 9900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "대파 1단",
+      "price": 1980,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "호박고구마 약1kg/1봉",
+      "price": 2580,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "꽈리고추 약400g/1봉",
+      "price": 2980,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "세척당근(수입) 3개/1팩",
+      "price": 1980,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "열무 1단",
+      "price": 2980,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "얼갈이 1단",
+      "price": 1980,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1833,15 +2489,15 @@
       "name": "실파 1단",
       "price": 1290,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
       "name": "백오이 5개/1봉",
-      "price": 1980,
+      "price": 2480,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1849,7 +2505,7 @@
       "name": "파프리카 4입/1봉",
       "price": 4980,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1857,7 +2513,7 @@
       "name": "양배추 1통",
       "price": 4980,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1865,7 +2521,15 @@
       "name": "호박고구마 10kg/1박스",
       "price": 22900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "배추(특) 3통/1망",
+      "price": 9900,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1873,23 +2537,47 @@
       "name": "콜라비 1개",
       "price": 1590,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
-      "name": "왕오렌지 6개/1망",
+      "name": "제주감귤(2L) 5Kg/1박스",
+      "price": 7900,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "무화과 1박스",
+      "price": 7900,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "청도연시 1판",
       "price": 6900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "시나노골드사과 9개",
+      "price": 9900,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
       "name": "샤인머스켓[특] 2kg/1박스",
-      "price": 7900,
+      "price": 9900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1897,31 +2585,15 @@
       "name": "대추방울토마토 2팩",
       "price": 8900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
-      "name": "단감 10개",
+      "name": "단감(특) 9개",
       "price": 9900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "무화과 1박스",
-      "price": 9900,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "시나노골드사과 7개",
-      "price": 9900,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1929,7 +2601,7 @@
       "name": "바나나 1송이",
       "price": 2490,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1937,7 +2609,7 @@
       "name": "머스크메론(대) 1통",
       "price": 11900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1945,7 +2617,7 @@
       "name": "수박(특) 1통",
       "price": 8900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1953,7 +2625,7 @@
       "name": "제주감귤(L) 5kg/1박스",
       "price": 13900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1961,7 +2633,7 @@
       "name": "청도연시(특) 6개/1팩",
       "price": 3980,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1969,23 +2641,23 @@
       "name": "신고배 3구/1팩",
       "price": 9900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
       "name": "완숙토마토(소) 5Kg/1박스",
-      "price": 16900,
+      "price": 19800,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
       "name": "거봉포도 2kg/1박스",
-      "price": 16900,
+      "price": 12900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -1993,7 +2665,7 @@
       "name": "오렌지(왕특) 6개/1망",
       "price": 7900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2001,7 +2673,7 @@
       "name": "추희자두(왕특) 약1kg/1팩",
       "price": 6900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2009,7 +2681,15 @@
       "name": "머루포도 3kg/1박스",
       "price": 14900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "켐벨포도(특) 3kg/1박스",
+      "price": 16900,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2017,7 +2697,7 @@
       "name": "샤인머스켓 2kg/1박스",
       "price": 9900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2025,47 +2705,39 @@
       "name": "샤인머스켓 4kg/1박스",
       "price": 16900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
-      "name": "수입냉장아롱사태 100g",
-      "price": 2980,
+      "name": "한우1+국거리 100g",
+      "price": 4980,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
-      "name": "한돈생목살 600g/1근",
-      "price": 13800,
-      "original_price": null,
-      "section": "10월 28일 수요장날~",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "한돈생등갈비 600g/1근",
+      "name": "한돈생삼겹살 600g/1근",
       "price": 15000,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
-      "name": "양념소불고기 600g/1근",
+      "name": "한돈앞다리살(제육용) 600g/1근",
       "price": 8900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
-      "name": "한돈벌집삼겹살 600g/1근",
-      "price": 18000,
+      "name": "양념고추장주물럭 1.2Kg/2근",
+      "price": 9900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2073,7 +2745,31 @@
       "name": "닭볶음탕 600g*2팩",
       "price": 7500,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "국산오징어 3마리",
+      "price": 11800,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "임연수(대) 2마리",
+      "price": 12800,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "동태 2마리",
+      "price": 5900,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2081,7 +2777,15 @@
       "name": "노르웨이자반 1손/2마리",
       "price": 9900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
+      "badge": ""
+    },
+    {
+      "mart": "ogq",
+      "name": "해물탕 1팩",
+      "price": 13800,
+      "original_price": null,
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2089,7 +2793,7 @@
       "name": "영광굴비 1.4kg/20마리",
       "price": 29800,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2097,7 +2801,7 @@
       "name": "쭈꾸미볶음 1팩",
       "price": 9900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2105,7 +2809,7 @@
       "name": "제주갈치(대) 2마리",
       "price": 13800,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2113,7 +2817,7 @@
       "name": "알탕 1팩",
       "price": 12800,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2121,7 +2825,7 @@
       "name": "양념훈제민물장어 2마리/1팩",
       "price": 9900,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2129,7 +2833,7 @@
       "name": "횟감용생굴 1근",
       "price": 8800,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2137,7 +2841,7 @@
       "name": "대구매운탕 1팩",
       "price": 13800,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
@@ -2145,21 +2849,13 @@
       "name": "신안새우젓[최저가] 2kg",
       "price": 30000,
       "original_price": null,
-      "section": "10월 28일 수요장날~",
+      "section": "10월 29일 목요장날~",
       "badge": ""
     },
     {
       "mart": "ogq",
       "name": "감자(왕특) 20kg/1박스",
-      "price": 42900,
-      "original_price": null,
-      "section": "농산 식자재 세일!!",
-      "badge": ""
-    },
-    {
-      "mart": "ogq",
-      "name": "배추(특) 3통/1망",
-      "price": 9900,
+      "price": 45000,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -2215,7 +2911,7 @@
     {
       "mart": "ogq",
       "name": "얼갈이 1박스",
-      "price": 3980,
+      "price": 3900,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -2223,7 +2919,7 @@
     {
       "mart": "ogq",
       "name": "열무 1박스",
-      "price": 9900,
+      "price": 3900,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -2278,8 +2974,8 @@
     },
     {
       "mart": "ogq",
-      "name": "꽃상추 1박스",
-      "price": 19800,
+      "name": "적상추 1박스",
+      "price": 12900,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -2287,7 +2983,7 @@
     {
       "mart": "ogq",
       "name": "청상추 1박스",
-      "price": 19800,
+      "price": 12900,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -2303,7 +2999,7 @@
     {
       "mart": "ogq",
       "name": "고추잎 1박스",
-      "price": 22900,
+      "price": 14900,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -2319,7 +3015,7 @@
     {
       "mart": "ogq",
       "name": "백오이(특) 50입/1박스",
-      "price": 19800,
+      "price": 24900,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -2335,7 +3031,7 @@
     {
       "mart": "ogq",
       "name": "청경채 1박스",
-      "price": 6900,
+      "price": 4900,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -2343,7 +3039,7 @@
     {
       "mart": "ogq",
       "name": "인큐애호박(상) 1박스",
-      "price": 14900,
+      "price": 9900,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -2391,7 +3087,7 @@
     {
       "mart": "ogq",
       "name": "청양고추(상) 10kg/1박스",
-      "price": 29800,
+      "price": 39800,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -2447,7 +3143,7 @@
     {
       "mart": "ogq",
       "name": "근대 1박스",
-      "price": 9900,
+      "price": 19800,
       "original_price": null,
       "section": "농산 식자재 세일!!",
       "badge": ""
@@ -3962,686 +4658,6 @@
       "price": 2980,
       "original_price": null,
       "section": "공산 유제품 음료 코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "알타리 4단",
-      "price": 9900,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": "대박초특가"
-    },
-    {
-      "mart": "dhn",
-      "name": "배추 1망",
-      "price": 9900,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": "서두르세요"
-    },
-    {
-      "mart": "dhn",
-      "name": "특란 30구",
-      "price": 6980,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "아이스크림 바류 10개",
-      "price": 4980,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "비비고사골곰탕 500g",
-      "price": 990,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": "한정수량"
-    },
-    {
-      "mart": "dhn",
-      "name": "오뚜기3분쇠고기카레/짜장 200g",
-      "price": 1180,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "사조 마일드참치 200g",
-      "price": 2850,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "농심안성탕면 멀티",
-      "price": 3280,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "해찬들사계절쌈장 500g",
-      "price": 2450,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "오뚜기 소면 900g",
-      "price": 2980,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "해표 식용유 1.8L",
-      "price": 4980,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "오뚜기 옛날참기름 320ml",
-      "price": 4980,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "샘표 진간장S 1.7L",
-      "price": 5980,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "유동 자연산골뱅이 400g",
-      "price": 9900,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "CJ햇반 200g*10",
-      "price": 12800,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "맥심 모카골드 250T",
-      "price": 39800,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "메뚜기쌀 20kg",
-      "price": 57800,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "피죤 2500ml",
-      "price": 3480,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "부자되는집 내추럴소프트 3겹30롤",
-      "price": 8950,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "대박김치 1박스",
-      "price": 17900,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "백김치 1박스",
-      "price": 19900,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "제주감귤 5kg/박스",
-      "price": 12800,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "샤인머스켓 4kg/박스",
-      "price": 14800,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "굴비 1팩",
-      "price": 9900,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "꽈리고추 1박스/상",
-      "price": 14800,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "한우꼬리반벌",
-      "price": 40000,
-      "original_price": null,
-      "section": "할인&대표상품",
-      "badge": "소진시종료!!"
-    },
-    {
-      "mart": "dhn",
-      "name": "청경채 1박스",
-      "price": 6980,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "얼갈이 1박스",
-      "price": 3980,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "무 1박스(9~10수)",
-      "price": 19800,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "국산양파 15kg",
-      "price": 19800,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "열무 1박스",
-      "price": 3980,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "인큐애호박 1박스/상",
-      "price": 9900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "근대 1박스",
-      "price": 14000,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "양배추 1망",
-      "price": 13900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "대파 10단",
-      "price": 15900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "가지 1박스/상",
-      "price": 12000,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "세척당근 1박스",
-      "price": 8900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "물파래 1판",
-      "price": 5980,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "꽃상추 1박스",
-      "price": 17800,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "찹찹이깻잎 1박스",
-      "price": 12800,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "애호박 2개/1팩",
-      "price": 1590,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "백오이 1박스/상",
-      "price": 17900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "깐쪽파 1단",
-      "price": 4980,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "왕쪽파 1단",
-      "price": 4980,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "백오이 5개/1봉",
-      "price": 2900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "가지 5개/1봉",
-      "price": 2980,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "사과 1봉",
-      "price": 9900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "시나노사과 6개",
-      "price": 12000,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "감홍사과 4개",
-      "price": 9900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "대봉감 10개",
-      "price": 7900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "연시 5개",
-      "price": 4980,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "제주감귤 1봉",
-      "price": 5980,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "샤인머스켓 2KG/1박스",
-      "price": 9900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "머루포도 1박스",
-      "price": 14900,
-      "original_price": null,
-      "section": "야채코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "순/연두부 2개",
-      "price": 990,
-      "original_price": null,
-      "section": "특가5일장",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "꽃느타리버섯 2kg/박스",
-      "price": 5980,
-      "original_price": null,
-      "section": "특가5일장",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "아욱 1박스",
-      "price": 9900,
-      "original_price": null,
-      "section": "특가5일장",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "꽈리고추 1박스",
-      "price": 14800,
-      "original_price": null,
-      "section": "특가5일장",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "알배기쌈배추 1박스",
-      "price": 19800,
-      "original_price": null,
-      "section": "특가5일장",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "감자(왕왕) 20kg/박스",
-      "price": 39800,
-      "original_price": null,
-      "section": "특가5일장",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "모듬해물 1봉",
-      "price": 7900,
-      "original_price": null,
-      "section": "특가5일장",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "간장게장 1팩",
-      "price": 10000,
-      "original_price": null,
-      "section": "특가5일장",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "오렌지 5개",
-      "price": 6900,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "신고배 4개",
-      "price": 6900,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "단감 10개",
-      "price": 9900,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "부추 1단",
-      "price": 1480,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "파프리카 2입/1봉",
-      "price": 1480,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "양파(중) 1망",
-      "price": 2500,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "깐쪽파(대) 1단",
-      "price": 4980,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "표고버섯 1kg내외/1봉",
-      "price": 8900,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "한우 생목살 1근/600g",
-      "price": 13800,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "한돈 생오겹살 1근/600g",
-      "price": 15600,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "한돈 생삼겹살 1근/600g",
-      "price": 16700,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "삼치(대) 1마리",
-      "price": 9900,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "노르웨이 자반 1손",
-      "price": 10900,
-      "original_price": null,
-      "section": "월화알뜰장터",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "한우 불고기 1근/600g",
-      "price": 24000,
-      "original_price": null,
-      "section": "정육",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "호주산 소불고기 1근/600g",
-      "price": 10800,
-      "original_price": null,
-      "section": "정육",
-      "badge": "소진시까지!!"
-    },
-    {
-      "mart": "dhn",
-      "name": "한우 잡뼈 1kg",
-      "price": 4000,
-      "original_price": null,
-      "section": "정육",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "한우 사골 2족",
-      "price": 20000,
-      "original_price": null,
-      "section": "정육",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "절단코다리 1박스",
-      "price": 55000,
-      "original_price": null,
-      "section": "수산코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "생선까스 100장/1박스",
-      "price": 27000,
-      "original_price": null,
-      "section": "수산코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "참조기 40미/50미",
-      "price": 40000,
-      "original_price": null,
-      "section": "수산코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "절단꽃게 1박스",
-      "price": 32000,
-      "original_price": null,
-      "section": "수산코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "두절가자미 100/150",
-      "price": 38000,
-      "original_price": null,
-      "section": "수산코너",
-      "badge": ""
-    },
-    {
-      "mart": "dhn",
-      "name": "두절가자미 150/200",
-      "price": 35000,
-      "original_price": null,
-      "section": "수산코너",
       "badge": ""
     }
   ]
