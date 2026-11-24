@@ -1,12 +1,12 @@
-민식당 특가 수집 시작 2026. 11. 22. 오전 11:00:03 (코드: main)
+민식당 특가 수집 시작 2026. 11. 23. 오전 11:00:02 (코드: main)
 [gjs]
   GET https://gjs.pabal.net/ → 200, 160자
-  ↪ 이동 안내 발견: https://gjs.pabal.net/page/gjs.pabal.net/335208_202611220932.html
-  GET https://gjs.pabal.net/page/gjs.pabal.net/335208_202611220932.html → 200, 457236자
-  ✅ 업로드 inbox/gjs-20261122-110004.html (457319자)
+  ↪ 이동 안내 발견: https://gjs.pabal.net/page/gjs.pabal.net/335208_202611230925.html
+  GET https://gjs.pabal.net/page/gjs.pabal.net/335208_202611230925.html → 200, 451477자
+  ✅ 업로드 inbox/gjs-20261123-110002.html (451560자)
 [ogq]
   GET https://ogq.pabal.net/ → 200, 160자
-  ↪ 이동 안내 발견: https://ogq.pabal.net/page/ogq.pabal.net/335704_202611220814.html
-  GET https://ogq.pabal.net/page/ogq.pabal.net/335704_202611220814.html → 200, 817025자
-  ✅ 업로드 inbox/ogq-20261122-110007.html (817108자)
-(기록 저장 시도 1)
+  ↪ 이동 안내 발견: https://ogq.pabal.net/page/ogq.pabal.net/335795_202611230949.html
+  GET https://ogq.pabal.net/page/ogq.pabal.net/335795_202611230949.html → 200, 773044자
+  ✅ 업로드 inbox/ogq-20261123-110006.html (773127자)
+(기록 저장 시도 2)
